@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <!--Se agrega un navbar desde bs-->
+    <nav class="navbar navbar-expand-lg navbar-mia">
+      <div class="container-fluid">
+        <img class="navbar-brand" src="./img/grapes.png" alt="logo">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navbar-collapse-mio justify-content-end" id="navbarNav">
+          <div class="navbar-nav">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="./pages/mendoza.html">Mendoza</a>
+            <a class="nav-link" href="./pages/ruta-del-vino.html">Ruta del vino</a>
+            <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
+            <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="portada-index">
+    <img src="./img/mendoza-portada-index.jpg" alt="cartel-mendoza">
+  </div>
+  <main class="main-index">
+    <article class="parrafo-main-index">
+      <h1>Mendoza</h1>
+      <p>
+        La llegada de la primera cepa a Mendoza es diez años anterior a la fundación (1561), siendo su iniciador
+        Francisco de Villagra, llegado desde Santiago de Chile.
+        Para otros, la primera cepa provenía de Santiago del Estero, cuyos viñedos datan de 1553. Así, la actividad se
+        remontaría a 1556, cuando el sacerdote Juan Cedrón —junto a Juan Jofré, luego gobernador de Cuyo— planta las
+        primeras vides.
+        Lo que pocos discuten es que la elaboración de vino estuvo originalmente vinculada a la liturgia del catolicismo
+        más que a una actividad comercial y, por ello, encuentra en las órdenes religiosas a sus primeros hacedores. Los
+        jesuitas distinguían a los vinos cuyanos (Mendoza y San Juan) por ser “muy generosos y fuertes, capaces de
+        soportar grandes viajes sin corromperse”. Además, otro aspecto fundamental es que el vino y las pasas de uvas,
+        como alimento calórico, eran un alimento básico en la dieta mediterránea,
+        particularmente para los soldados.
+        Muchos años más tarde, a instancias de Faustino Sarmiento, el gobernador Pedro Pascual Segura contrata al
+        agrónomo francés Michel Aimé Pouget, quien se radica en 1853 y planta variedades de uva originarias de su país
+        natal, como Malbec, Cabernet, Merlot, Semillon, Sauvignon y Chardonnay, entre otras.
+        Hacia 1880, Tiburcio Benegas desarrolló 250 hectáreas de viñedos de primer nivel y creó una bodega modelo:
+        «El Trapiche». Comenzaba así el despegue.
+        En 1885, el ferrocarril a Buenos Aires desató en Mendoza una fiebre productora. Algunas bodegas llegaron a tener
+        su propia estación.
+        Desde entonces - y merced a la crisis de la producción cerealera y el comercio ganadero, incapaces de competir
+        con la Pampa Húmeda— se desarrolla la vitivinicultura a escala industrial, contando con la
+        inmigración europea que aporta mano de obra calificada, transformación técnica y un mercado local consumidor.
+      </p>
+    </article>
+    <article class="img-main-index">
+      <img src="./img/main-index2.png" alt="vinedo" class="img-index">
+    </article>
+  </main>
+  <section class="section-bodegas">
+    <!--Se agrega un carrusel desde bs-->
+    <div id="carouselExampleIndicators" class="carousel slide carrusel-mio">
+      <div class="carousel-indicators carrusel-indicadores-mio">
+        <button class="active indicador-mio" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+        <button class="indicador-mio" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button class="indicador-mio" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner carrusel-fotos-mio">
+        <div class="carousel-item active">
+          <img src="./img/alta-vista.jpg" class="d-block w-100" alt="Bodega-Alta-Vista">
+        </div>
+        <div class="carousel-item">
+          <img src="./img/bodega-los-toneles.jpg" class="d-block w-100" alt="Bodega-Los-Toneles">
+        </div>
+        <div class="carousel-item">
+          <img src="./img/catena.jpg" class="d-block w-100" alt="Catena">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="detalle-bodegas">
+      <h2>Algunas de nuestras bodegas</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores praesentium, quia sequi culpa architecto distinctio eius odit cupiditate suscipit exercitationem incidunt! Exercitationem necessitatibus eligendi aliquam officiis maiores ducimus vitae laudantium. Cumque commodi deleniti nemo iste, illo facilis debitis consequuntur error quas incidunt odio expedita quo sed minus ducimus dolorem adipisci, numquam beatae possimus corrupti, maxime quaerat accusantium? Odio facilis ducimus perferendis quas voluptatem voluptate facere quos deleniti vitae dolore quod soluta cumque aut iure at non, sequi sunt perspiciatis distinctio?
+      </p>
+    </div>
+  </section>
+  <section class="iframe-mendoza">
+    <h2>Cosas que podés hacer en nuestra provincia</h2>
+    <div class="video-mendoza">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/N8Zc5ORQJ_Q" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen="">
+      </iframe>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <address>© 2023 Germán Orellano, todos los derechos reservados</address>
+    <ul class="iconos-footer">
+      <li>
+        <a href="https://www.instagram.com/index" target="_blank">
+          <img src="./img/instagram.png" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="https://es-la.facebook.com/index" target="_blank">
+          <img src="./img/facebook.png" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/explore" target="_blank">
+          <img src="./img/twitter.png" alt="">
+        </a>
+      </li>
+    </ul>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

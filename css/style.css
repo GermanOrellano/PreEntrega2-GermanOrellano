@@ -1,0 +1,748 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-mia {
+    background-image: linear-gradient(to right, #fa8d8d, #e00b52);
+}
+
+.navbar-brand {
+    height: 45px;
+    width: 35px;
+}
+
+.nav-link {
+    color: #ffff;
+    font-size: larger;
+}
+
+.footer {
+    height: 40px;
+    color: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #fa8d8d, #e00b52);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.footer address {
+    margin: 2px;
+}
+
+.iconos-footer {
+    display: flex;
+    margin: 0;
+}
+
+.iconos-footer li {
+    display: inline;
+}
+
+/*ESTILOS INDEX*/
+
+.portada-index {
+    width: auto;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+}
+
+.portada-index img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.main-index {
+    background-color: rgb(250, 141, 141);
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+}
+
+.parrafo-main-index {
+    text-align: justify;
+    font-size: medium;
+}
+
+.img-main-index {
+    justify-self: center;
+}
+
+.parrafo-main-index h1 {
+    text-align: center;
+    font-size: larger;
+}
+
+.img-index {
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    box-shadow:
+        inset 0 -3em 3em rgba(0, 0, 0, 0.3),
+        0 0 0 2px rgb(255, 255, 255),
+        0.3em 0.3em 3em rgba(0, 0, 0, 0.5);
+}
+
+.section-bodegas {
+    margin: 5px 10px;
+    padding: 15px;
+    background-color: #bebebe;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.detalle-bodegas {
+    width: 45%;
+    text-align: justify;
+    padding-left: 20px;
+}
+
+.section-bodegas h2 {
+    font-size: large;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+/*Se cambia tamaño carrusel*/
+.carrusel-mio {
+    width: 45%;
+    padding-right: 20px;
+}
+
+/*Se modifican las propiedades de los indicadores*/
+.indicador-mio {
+    background-color: black !important;
+    background-clip: border-box !important;
+    width: 20px !important;
+    height: 5px !important;
+    border: 2px solid !important;
+}
+
+.carrusel-fotos-mio {
+    border-radius: 10px;
+    box-shadow:
+        inset 0 -3em 3em rgba(0, 0, 0, 0.3),
+        0 0 0 2px rgb(255, 255, 255),
+        0.3em 0.3em 3em rgba(0, 0, 0, 0.5);
+}
+
+.iframe-mendoza {
+    background-color: rgb(250, 141, 141);
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.iframe-mendoza h2 {
+    font-size: large;
+    padding-bottom: 15px;
+}
+
+.video-mendoza {
+    justify-content: center;
+}
+
+.video-mendoza iframe {
+    border-radius: 10px;
+    width: 700px;
+    height: 380px;
+    box-shadow:
+        inset 0 -3em 3em rgba(0, 0, 0, 0.3),
+        0 0 0 2px rgb(255, 255, 255),
+        0.3em 0.3em 3em rgba(0, 0, 0, 0.5);
+}
+
+/*ESTILOS PÁG MENDOZA*/
+
+.portada-mendoza {
+    width: auto;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.portada-mendoza img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.main-mendoza {
+    background-color: rgb(250, 141, 141);
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: justify;
+    justify-content: center;
+    font-size: medium;
+}
+
+.main-mendoza h1 {
+    text-align: center;
+    font-size: larger;
+}
+
+.zonas-mendoza {
+    margin: 5px 10px;
+    padding: 15px;
+    background-color: #bebebe;
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "ne-mend zona-alta"
+        "valle-uco sur-mend";
+    justify-items: center;
+    align-items: start;
+}
+
+.norte-y-este {
+    grid-area: ne-mend;
+    box-shadow:
+        inset 0 -3em 3em rgba(0, 0, 0, 0.3),
+        0.3em 0.3em 3em rgba(0, 0, 0, 0.5);
+}
+
+.zona-alta {
+    grid-area: zona-alta;
+    box-shadow:
+        inset 0 -3em 3em rgba(0, 0, 0, 0.3),
+        0.3em 0.3em 3em rgba(0, 0, 0, 0.5);
+}
+
+.valle-de-uco {
+    grid-area: valle-uco;
+    box-shadow:
+        inset 0 -3em 3em rgba(0, 0, 0, 0.3),
+        0.3em 0.3em 3em rgba(0, 0, 0, 0.5);
+}
+
+.sur-mendocino {
+    grid-area: sur-mend;
+    box-shadow:
+        inset 0 -3em 3em rgba(0, 0, 0, 0.3),
+        0.3em 0.3em 3em rgba(0, 0, 0, 0.5);
+}
+
+.card-body {
+    text-align: justify;
+}
+
+/*ESTILOS PÁG RUTA DEL VINO*/
+
+.portada-ruta-del-vino {
+    width: auto;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.portada-ruta-del-vino img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.main-ruta-vino {
+    background-color: rgb(250, 141, 141);
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+    grid-row: repeat(3, 1fr);
+    grid-template-areas: "titulo-grid titulo-grid titulo-grid titulo-grid"
+        "foto-main parraf-main ruta1 ruta2 "
+        "foto-main parraf-main ruta3 ruta4";
+    font-size: medium;
+    column-gap: 10px;
+    row-gap: 5px;
+}
+
+.main-ruta-vino img {
+    border-radius: 10px;
+    box-shadow:
+        inset 0 -3em 3em rgba(0, 0, 0, 0.3),
+        0.3em 0.3em 3em rgba(0, 0, 0, 0.5);
+}
+
+.titulo-grid {
+    grid-area: titulo-grid;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.parrafo-ruta-main {
+    grid-area: parraf-main;
+    text-align: justify;
+}
+
+.img-main-ruta {
+    grid-area: foto-main;
+    align-self: center;
+    justify-self: center;
+}
+
+.img-ruta1 {
+    grid-area: ruta1;
+    align-self: center;
+    justify-self: center;
+}
+
+.img-ruta2 {
+    grid-area: ruta2;
+    align-self: center;
+    justify-self: center;
+}
+
+.img-ruta3 {
+    grid-area: ruta3;
+    align-self: center;
+    justify-self: center;
+}
+
+.img-ruta4 {
+    grid-area: ruta4;
+    align-self: center;
+    justify-self: center;
+}
+
+.contrataciones {
+    margin: 5px 10px;
+    padding: 15px;
+    background-color: #bebebe;
+}
+
+.contrataciones h2 {
+    font-size: 1.5rem;
+}
+
+.flex-contrataciones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex-contrataciones img {
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.grid-contrataciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: .5fr 1fr;
+    grid-template-areas: "tour alojamiento"
+        "p-tour-bici p-alojamiento";
+    gap: 10px;
+}
+
+.tour {
+    grid-area: tour;
+    justify-self: center;
+    align-self: center;
+    font-size: 1.5rem;
+}
+
+.p-tour-bici {
+    grid-area: p-tour-bici;
+    justify-self: center;
+    text-align: justify;
+}
+
+.alojamiento {
+    grid-area: alojamiento;
+    justify-self: center;
+    align-self: center;
+    font-size: 1.5rem;
+}
+
+.p-alojamiento {
+    grid-area: p-alojamiento;
+    justify-self: center;
+    text-align: justify
+}
+
+.map {
+    background-color: rgb(250, 141, 141);
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.map iframe {
+    border-radius: 10px;
+    width: 700px;
+}
+
+/*ESTILOS PÁG NOSOTROS*/
+
+.portada-nosotros {
+    width: auto;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.portada-nosotros img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.sobre-nosotros {
+
+    background-color: rgb(250, 141, 141);
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+
+.yo {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    text-align: justify;
+}
+
+.yo p {
+    padding-left: 10px;
+}
+
+.yo img {
+    border-radius: 10px;
+    box-shadow:
+        inset 0 -3em 3em rgba(0, 0, 0, 0.3),
+        0.3em 0.3em 3em rgba(0, 0, 0, 0.5);
+}
+
+/*ESTILOS PÁG CONTACTO*/
+
+.portada-contacto {
+    width: auto;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.portada-contacto img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.main-contacto {
+    background-color: rgb(250, 141, 141);
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px 500px;
+    grid-template-areas: "titulo-contacto titulo-ubicacion"
+        "formulario mapa";
+}
+
+.titulo-contacto {
+    grid-area: titulo-contacto;
+    text-align: center;
+}
+
+.titulo-ubicacion {
+    grid-area: titulo-ubicacion;
+    text-align: center;
+}
+
+.formulario {
+    grid-area: formulario;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.mapa-ubicacion {
+    grid-area: mapa;
+    text-align: center;
+}
+
+.mapa-ubicacion iframe {
+    border-radius: 10px;
+    box-shadow:
+        inset 0 -3em 3em rgba(0, 0, 0, 0.3),
+        0.3em 0.3em 3em rgba(0, 0, 0, 0.5);
+}
+
+
+/*MEDIA PÁG INDEX*/
+
+@media (max-width:1200px) {
+    .main-index {
+        grid-template-columns: 1.5fr 1fr;
+    }
+
+    .main-index h1 {
+        font-size: large;
+    }
+
+    .img-index {
+        width: auto;
+    }
+
+    .carrusel-mio {
+        width: 55%;
+    }
+}
+
+@media (max-width:1024px) {
+    .portada-index {
+        height: 600px;
+    }
+
+    .main-index {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+
+    .section-bodegas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carrusel-mio {
+        width: auto;
+        padding: 0;
+    }
+
+    .detalle-bodegas {
+        width: auto;
+        margin-top: 15px;
+        padding: 0;
+    }
+}
+
+@media (max-width:768px) {
+    .portada-index {
+        height: 400px;
+    }
+
+    .img-index {
+        height: 400px;
+    }
+
+    .video-mendoza iframe {
+        width: 550px;
+    }
+}
+
+@media (max-width:600px) {
+    .navbar-brand {
+        width: 30px;
+        height: 35px;
+    }
+
+    .navbar-toggler {
+        width: 40px;
+        height: 35px;
+        align-items: center;
+        padding: 0;
+    }
+
+    .navbar-toggler-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .portada-index {
+        height: 300px;
+    }
+
+    .parrafo-main-index {
+        font-size: smaller;
+    }
+
+    .detalle-bodegas {
+        font-size: smaller;
+    }
+
+    .video-mendoza iframe {
+        width: 400px;
+    }
+
+    .footer {
+        font-size: smaller;
+    }
+}
+
+@media(max-width:480px) {
+    .portada-index {
+        height: 200px;
+    }
+
+    .img-index {
+        width: 280px;
+        height: 300px;
+    }
+    .parrafo-main-index{
+        font-size: x-small;
+    }
+
+    .parrafo-main-index h1 {
+        font-size: medium;
+    }
+
+    .detalle-bodegas {
+        font-size: x-small
+    }
+
+    .detalle-bodegas h2 {
+        font-size: medium;
+    }
+
+    .iframe-mendoza h2 {
+        font-size: medium;
+    }
+
+    .video-mendoza iframe {
+        width: 280px;
+        height: 300px;
+    }
+
+    .footer {
+        font-size: x-small;
+    }
+}
+
+@media(max-width: 320px){
+    .portada-index {
+        height: 180px;
+    }
+    
+    .img-index {
+        width: 280px;
+        height: 300px;
+    }
+
+    .video-mendoza iframe {
+        width: 280px;
+        height: 300px;
+    }
+}
+
+/*MEDIA PÁG MENDOZA*/
+
+@media (max-width:1200px) {
+    .portada-mendoza {
+        height: 600px;
+    }
+}
+
+@media (max-width:1024px) {
+    .portada-mendoza {
+        height: 500px;
+    }
+}
+
+@media (max-width:768px) {
+    .portada-mendoza {
+        height: 400px;
+    }
+
+    .zonas-mendoza {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: "ne-mend" 
+                             "zona-alta"
+                             "valle-uco" 
+                             "sur-mend";
+    }
+}
+
+@media (max-width:600px) {
+    .navbar-brand {
+        width: 30px;
+        height: 35px;
+    }
+
+    .navbar-toggler {
+        width: 40px;
+        height: 35px;
+        align-items: center;
+        padding: 0;
+    }
+
+    .navbar-toggler-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .portada-mendoza {
+        height: 300px;
+    }
+
+    .main-mendoza p {
+        font-size: smaller;
+    }
+
+    .zonas-mendoza p {
+        font-size: smaller;
+    }
+
+    .footer {
+        font-size: smaller;
+    }
+}
+
+@media(max-width:480px) {
+    .portada-mendoza {
+        height: 200px;
+    }
+
+    .main-mendoza h1{
+        font-size: medium;
+    }
+
+    .main-mendoza p{
+        font-size: x-small;
+    }
+
+    .zonas-mendoza h5 {
+        font-size: smaller;
+    }
+
+    .zonas-mendoza p {
+        font-size: x-small;
+    }
+
+    .footer {
+        font-size: x-small;
+    }
+}
+
+@media(max-width: 320px){
+    .portada-mendoza {
+        height: 180px;
+    }
+}
