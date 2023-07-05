@@ -1,0 +1,58 @@
+@import '../utilities/variables';
+@import '../utilities/list';
+@import '../utilities/mixins';
+
+.main-mendoza {
+    background-color: $color-ppl;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+
+    p {
+        color: map-get($parraf, color);
+        font-size: map-get($parraf, font-size);
+        font-weight: map-get($parraf, font-weight);
+        text-align: justify;
+        justify-content: center;
+    }
+
+
+    h1 {
+        text-align: center;
+        color: map-get($h1, color);
+        font-size: map-get($h1, font-size);
+        font-weight: map-get($h1, font-weight);
+    }
+}
+
+.zonas-mendoza {
+    margin: 5px 10px;
+    padding: 15px;
+    background-color: nth($colors, 1);
+    @include nueva-grilla (repeat(2, 1fr), repeat(2, 1fr), "");
+    column-gap: 10px;
+    row-gap: 10px;
+    justify-items: center;
+    align-items: start;
+
+    div {
+        height: 750px;
+        @extend %sombras;
+
+        .card {
+            text-align: justify;
+
+            h2 {
+                color: map-get($h2, color);
+                font-size: map-get($h2, font-size);
+                font-weight: map-get($h2, font-weight);
+            }
+
+            p {
+                color: map-get($parraf2, color);
+                font-size: map-get($parraf2, font-size);
+                font-weight: map-get($parraf2, font-weight);
+            }
+        }
+    }
+}

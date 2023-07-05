@@ -1,0 +1,38 @@
+@import '../utilities/variables';
+@import '../utilities/list';
+@import '../utilities/extends';
+
+.sobre-nosotros {
+
+    background-color: $color-ppl;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+
+    h1 {
+        @extend %flex-3;
+        color: map-get($h1, color);
+        font-size: map-get($h1, font-size);
+        font-weight: map-get($h1, font-weight);
+        padding-bottom: 10px;
+    }
+
+    .yo {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        text-align: justify;
+
+        p {
+            padding-left: 10px;
+            color: map-get($parraf3, color);
+            font-size: map-get($parraf3, font-size);
+            font-weight: map-get($parraf3, font-weight);
+        }
+
+        img {
+            border-radius: 10px;
+            @extend %sombras;
+        }
+    }
+}

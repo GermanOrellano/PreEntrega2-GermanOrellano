@@ -1,0 +1,38 @@
+@import '../utilities/variables';
+@import '../utilities/mixins';
+@import '../utilities/extends';
+
+@import '../layout/forms';
+
+.main-contacto {
+    background-color: $color-ppl;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    @include nueva-grilla(repeat(2, 1fr), 50px 500px, "titulo-contacto titulo-ubicacion"
+        "formulario mapa");
+    align-items: center;
+
+    .titulo-contacto {
+        @include grillas-text (titulo-contacto, center);
+        color: map-get($h1, color);
+        font-size: map-get($h1, font-size);
+        font-weight: map-get($h1, font-weight);
+    }
+
+    .titulo-ubicacion {
+        @include grillas-text (titulo-ubicacion, center);
+        color: map-get($h2, color);
+        font-size: map-get($h2, font-size);
+        font-weight: map-get($h2, font-weight);
+    }
+
+    .mapa-ubicacion {
+        @include grillas-text (mapa, center);
+
+        iframe {
+            border-radius: 10px;
+            @extend %sombras;
+        }
+    }
+}

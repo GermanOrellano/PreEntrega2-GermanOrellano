@@ -1,0 +1,16 @@
+@import '../utilities/variables';
+@import '../utilities/list';
+
+.navbar-mia {
+    background-image: linear-gradient(to right, $color-ppl, $color-sd);
+}
+
+.navbar-brand {
+    height: 45px;
+    width: 35px;
+}
+
+.nav-link {
+    color: nth($colors, 2);
+    font-size: nth($font-sizes, 2);
+}

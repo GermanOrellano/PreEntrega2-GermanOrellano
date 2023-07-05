@@ -1,0 +1,7 @@
+@import '../utilities/extends';
+@import '../utilities/mixins';
+
+.formulario {
+    @include grillas-text (formulario, center);
+    @extend %flex-3;
+}

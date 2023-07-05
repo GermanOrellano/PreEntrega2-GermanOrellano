@@ -1,0 +1,20 @@
+@import '../utilities/list';
+@import '../utilities/extends';
+
+.carrusel-mio {
+    width: 45%;
+    padding-right: 20px;
+
+    .indicador-mio {
+        background-color: nth($colors, 3) !important;
+        background-clip: border-box !important;
+        width: 20px !important;
+        height: 5px !important;
+        border: 2px solid !important;
+    }
+
+    .carrusel-fotos-mio {
+        border-radius: 10px;
+        @extend %sombras;
+    }
+}

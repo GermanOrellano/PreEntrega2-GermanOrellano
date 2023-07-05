@@ -1,0 +1,17 @@
+@mixin nueva-grilla ($temp-col, $temp-rows, $temp-areas) {
+    display: grid;
+    grid-template-columns: $temp-col;
+    grid-template-rows: $temp-rows;
+    grid-template-areas: $temp-areas;
+}
+
+@mixin grillas-text ($grid-a, $text-a) {
+    grid-area: $grid-a;
+    text-align: $text-a;
+}
+
+@mixin grillas-img ($grid-a, $align-s, $just-s) {
+    grid-area: $grid-a;
+    align-self: $align-s;
+    justify-self: $just-s;
+}

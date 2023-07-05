@@ -1,0 +1,51 @@
+@import '../utilities/variables';
+@import '../utilities/list';
+
+//Se crean mapas para los distintos títulos
+$h1: (
+    color: $color-h,
+    font-size: 30px,
+    font-weight: bolder,
+);
+
+$h2: (
+    color: $color-h,
+    font-size: 24px,
+    font-weight: normal,
+);
+
+$h3: (
+    color: $color-h,
+    font-size: 20px,
+    font-weight: normal,
+);
+
+$h4: (
+    color: $color-h,
+    font-size: 18px,
+    font-weight: normal,
+);
+
+$h5: (
+    color: $color-h,
+    font-size: 16px,
+    font-weight: normal,
+);
+
+$parraf:(
+    color: $color-h,
+    font-size: 20px,
+    font-weight: normal,
+);
+
+$parraf2: (
+    color: nth($colors, 3),
+    font-size: 16px,
+    font-weight: normal,
+);
+
+$parraf3: (
+    color: $color-h,
+    font-size: 18px,
+    font-weight: normal,
+);

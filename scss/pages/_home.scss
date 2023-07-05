@@ -1,0 +1,89 @@
+@import '../base/typo';
+@import '../utilities/variables';
+@import '../utilities/list';
+@import '../utilities/extends';
+@import '../utilities/mixins';
+
+@import '../components/carousel';
+
+.main-index {
+    background-color: $color-ppl;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    @include nueva-grilla(2fr 1fr, 1fr, "");
+    gap: 1rem;
+
+    h1 {
+        text-align: center;
+        color: map-get($h1, color);
+        font-size: map-get($h1, font-size);
+        font-weight: map-get($h1, font-weight);
+    }
+
+    p {
+        text-align: justify;
+        color: map-get($parraf, color);
+        font-size: map-get($parraf, font-size);
+        font-weight: map-get($parraf, font-weight);
+    }
+
+    img {
+        justify-self: center;
+        width: auto;
+        height: auto;
+        border-radius: 20px;
+        @extend %sombras;
+    }
+
+}
+
+.section-bodegas {
+    margin: 5px 10px;
+    padding: 15px;
+    background-color: nth($colors , 1);
+    @extend %flex-2;
+
+    .detalle-bodegas {
+        color: map-get($parraf, color);
+        font-size: map-get($parraf, font-size);
+        font-weight: map-get($parraf, font-weight);
+        width: 45%;
+        text-align: justify;
+        padding-left: 20px;
+
+        h2 {
+            color: map-get($h2, color);
+            font-size: map-get($h2, font-size);
+            font-weight: map-get($h2, font-weight);
+            text-align: center;
+            padding-bottom: 15px;
+        }
+    }
+}
+
+.iframe-mendoza {
+    background-color: $color-ppl;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    @extend %flex-3;
+
+    h2 {
+        color: map-get($h2, color);
+        font-size: map-get($h2, font-size);
+        font-weight: map-get($h2, font-weight);
+        padding-bottom: 15px;
+    }
+
+    .video-mendoza {
+        justify-content: center;
+
+        iframe {
+            border-radius: 10px;
+            width: 700px;
+            height: 380px;
+            @extend %sombras;
+        }
+    }
+}

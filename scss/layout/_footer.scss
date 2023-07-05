@@ -1,0 +1,26 @@
+@import '../utilities/list';
+@import '../utilities/variables';
+@import '../utilities/extends';
+
+.footer {
+    height: 40px;
+    color: nth($colors, 2);
+    @extend %flex-1;
+    background-image: linear-gradient(to right, $color-ppl, $color-sd);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    address {
+        margin: 2px;
+        color: $color-h;
+    }
+}
+
+.iconos-footer {
+    display: flex;
+    margin: 0;
+
+    li{
+        display: inline;
+    }
+}
