@@ -14,13 +14,33 @@
         margin: 2px;
         color: $color-h;
     }
-}
 
-.iconos-footer {
-    display: flex;
-    margin: 0;
+    .iconos-footer {
+        display: flex;
+        margin: 0;
+    
+        li{
+            display: inline-flex;
+        }
+    }
 
-    li{
-        display: inline;
+    @media (max-width:768px){
+        font-size: smaller;
+    }
+
+    @media (max-width:480px){
+        font-size: x-small;
+
+        .iconos-footer { 
+            img {
+                height: 20px;
+            }
+        }
+    }
+
+    @media (max-width:320px){
+        font-size: xx-small;
+        text-align: center;
     }
 }
+
