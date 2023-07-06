@@ -35,4 +35,123 @@
             @extend %sombras;
         }
     }
+
+    @media(max-width:1200px) {
+        .titulo-contacto {
+            font-size: 28px;
+        }
+
+        .titulo-ubicacion {
+            font-size: 22px;
+        }
+
+        .mapa-ubicacion {
+            iframe {
+                width: 550px;
+            }
+        }
+    }
+
+    @media(max-width:1024px) {
+        gap: 5px;
+
+        .titulo-contacto {
+            font-size: 27px;
+        }
+
+        .titulo-ubicacion {
+            font-size: 21px;
+        }
+
+        .mapa-ubicacion {
+            iframe {
+                width: 480px;
+            }
+        }
+    }
+
+    @media(max-width:768px) {
+        @include nueva-grilla(repeat(2, 1fr), 30px 400px, "titulo-contacto titulo-ubicacion"
+            "formulario mapa");
+
+        gap: 5px;
+
+        .titulo-contacto {
+            font-size: 22px;
+        }
+
+        .titulo-ubicacion {
+            font-size: 20px;
+        }
+
+        .mapa-ubicacion {
+            iframe {
+                width: 350px;
+                height: 350px;
+            }
+        }
+    }
+
+    @media(max-width:600px) {
+        .titulo-contacto {
+            font-size: 21px;
+        }
+
+        .titulo-ubicacion {
+            font-size: 17px;
+        }
+
+        .mapa-ubicacion {
+            iframe {
+                width: auto;
+                height: 350px;
+            }
+        }
+    }
+
+    @media(max-width:480px) {
+        @include nueva-grilla(1fr, 0.2fr 1fr 0.2fr 1fr, "titulo-contacto"
+        "formulario"
+        "titulo-ubicacion"
+        " mapa");
+
+        .titulo-contacto {
+            font-size: 20px;
+        }
+
+        .titulo-ubicacion {
+            font-size: 15px;
+        }
+
+        .mapa-ubicacion {
+            iframe {
+                width: 400px;
+                height: 350px;
+            }
+        }
+    }
+
+    @media(max-width:320px) {
+        @include nueva-grilla(1fr, 0.1fr 1fr 0.1fr 1fr, "titulo-contacto"
+        "formulario"
+        "titulo-ubicacion"
+        " mapa");
+
+        padding: 5px; 
+
+        .titulo-contacto {
+            font-size: 18px;
+        }
+
+        .titulo-ubicacion {
+            font-size: 12px;
+        }
+
+        .mapa-ubicacion {
+            iframe {
+                width: 300px;
+                height: 250px;
+            }
+        }
+    }
 }

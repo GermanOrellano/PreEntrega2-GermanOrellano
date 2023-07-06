@@ -4,4 +4,28 @@
 .formulario {
     @include grillas-text (formulario, center);
     @extend %flex-3;
+
+    @media(max-width:1200) {
+        
+    }
+
+    @media(max-width:1200) {
+        
+    }
+
+    @media(max-width:1200) {
+        
+    }
+
+    @media(max-width:1200) {
+        
+    }
+
+    @media(max-width:1200) {
+        
+    }
+
+    @media(max-width:1200) {
+        
+    }
 }

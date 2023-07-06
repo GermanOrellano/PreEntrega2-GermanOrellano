@@ -1202,7 +1202,6 @@ header {
   grid-area: formulario;
   text-align: center;
 }
-
 .main-contacto {
   background-color: #fa8d8d;
   margin: 5px;
@@ -1234,6 +1233,99 @@ header {
 }
 .main-contacto .mapa-ubicacion iframe {
   border-radius: 10px;
+}
+@media (max-width: 1200px) {
+  .main-contacto .titulo-contacto {
+    font-size: 28px;
+  }
+  .main-contacto .titulo-ubicacion {
+    font-size: 22px;
+  }
+  .main-contacto .mapa-ubicacion iframe {
+    width: 550px;
+  }
+}
+@media (max-width: 1024px) {
+  .main-contacto {
+    gap: 5px;
+  }
+  .main-contacto .titulo-contacto {
+    font-size: 27px;
+  }
+  .main-contacto .titulo-ubicacion {
+    font-size: 21px;
+  }
+  .main-contacto .mapa-ubicacion iframe {
+    width: 480px;
+  }
+}
+@media (max-width: 768px) {
+  .main-contacto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 30px 400px;
+    grid-template-areas: "titulo-contacto titulo-ubicacion" "formulario mapa";
+    gap: 5px;
+  }
+  .main-contacto .titulo-contacto {
+    font-size: 22px;
+  }
+  .main-contacto .titulo-ubicacion {
+    font-size: 20px;
+  }
+  .main-contacto .mapa-ubicacion iframe {
+    width: 350px;
+    height: 350px;
+  }
+}
+@media (max-width: 600px) {
+  .main-contacto .titulo-contacto {
+    font-size: 21px;
+  }
+  .main-contacto .titulo-ubicacion {
+    font-size: 17px;
+  }
+  .main-contacto .mapa-ubicacion iframe {
+    width: auto;
+    height: 350px;
+  }
+}
+@media (max-width: 480px) {
+  .main-contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr 1fr;
+    grid-template-areas: "titulo-contacto" "formulario" "titulo-ubicacion" " mapa";
+  }
+  .main-contacto .titulo-contacto {
+    font-size: 20px;
+  }
+  .main-contacto .titulo-ubicacion {
+    font-size: 15px;
+  }
+  .main-contacto .mapa-ubicacion iframe {
+    width: 400px;
+    height: 350px;
+  }
+}
+@media (max-width: 320px) {
+  .main-contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr 1fr;
+    grid-template-areas: "titulo-contacto" "formulario" "titulo-ubicacion" " mapa";
+    padding: 5px;
+  }
+  .main-contacto .titulo-contacto {
+    font-size: 18px;
+  }
+  .main-contacto .titulo-ubicacion {
+    font-size: 12px;
+  }
+  .main-contacto .mapa-ubicacion iframe {
+    width: 300px;
+    height: 250px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
