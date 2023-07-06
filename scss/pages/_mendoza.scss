@@ -98,6 +98,11 @@
     div {
         height: 750px;
         @extend %sombras;
+        transition: all 300ms;
+
+        &:hover {
+            transform: scale(1.01);
+        }
 
         .card {
             text-align: justify;

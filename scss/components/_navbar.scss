@@ -11,6 +11,10 @@
 }
 
 .nav-link {
+    &:focus {
+        background-color: $color-sd;
+    }
+
     color: nth($colors, 2);
     font-size: nth($font-sizes, 2);
 }
