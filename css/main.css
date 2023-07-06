@@ -280,7 +280,7 @@ header {
     gap: 0.5rem;
   }
   .main-index h1 {
-    font-size: 22px;
+    font-size: 21px;
   }
   .main-index p {
     font-size: 11px;
@@ -497,6 +497,54 @@ header {
   font-size: 30px;
   font-weight: bolder;
 }
+@media (max-width: 1200px) {
+  .main-mendoza h1 {
+    font-size: 28px;
+  }
+  .main-mendoza p {
+    font-size: 17px;
+  }
+}
+@media (max-width: 1024px) {
+  .main-mendoza h1 {
+    font-size: 27px;
+  }
+  .main-mendoza p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .main-mendoza h1 {
+    font-size: 22px;
+  }
+  .main-mendoza p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .main-mendoza h1 {
+    font-size: 21px;
+  }
+  .main-mendoza p {
+    font-size: 11px;
+  }
+}
+@media (max-width: 480px) {
+  .main-mendoza h1 {
+    font-size: 20px;
+  }
+  .main-mendoza p {
+    font-size: 10px;
+  }
+}
+@media (max-width: 320px) {
+  .main-mendoza h1 {
+    font-size: 18px;
+  }
+  .main-mendoza p {
+    font-size: 8px;
+  }
+}
 
 .zonas-mendoza {
   margin: 5px 10px;
@@ -526,6 +574,79 @@ header {
   color: #000000;
   font-size: 16px;
   font-weight: normal;
+}
+@media (max-width: 1024px) {
+  .zonas-mendoza div .card h2 {
+    font-size: 21px;
+  }
+  .zonas-mendoza div .card p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .zonas-mendoza div .card h2 {
+    font-size: 20px;
+  }
+  .zonas-mendoza div .card p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .zonas-mendoza div .card h2 {
+    font-size: 17px;
+  }
+  .zonas-mendoza div .card p {
+    font-size: 11px;
+  }
+}
+@media (max-width: 480px) {
+  .zonas-mendoza div .card h2 {
+    font-size: 15px;
+  }
+  .zonas-mendoza div .card p {
+    font-size: 10px;
+  }
+}
+@media (max-width: 320px) {
+  .zonas-mendoza div .card h2 {
+    font-size: 12px;
+  }
+  .zonas-mendoza div .card p {
+    font-size: 8px;
+  }
+}
+@media (max-width: 768px) {
+  .zonas-mendoza {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "";
+  }
+  .zonas-mendoza div {
+    height: 700px;
+  }
+}
+@media (max-width: 600px) {
+  .zonas-mendoza {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "";
+    row-gap: 5px;
+  }
+  .zonas-mendoza div {
+    height: 600px;
+  }
+}
+@media (max-width: 480px) {
+  .zonas-mendoza div {
+    height: 500px;
+  }
+}
+@media (max-width: 320px) {
+  .zonas-mendoza div {
+    height: 400px;
+  }
 }
 
 .main-ruta-vino {
