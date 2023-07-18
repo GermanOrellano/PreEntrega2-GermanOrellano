@@ -33,20 +33,20 @@ $h5: (
 );
 
 $parraf:(
-    color: $color-h,
+    color: nth($colors, 3),
     font-size: 20px,
     font-weight: normal,
 );
 
 $parraf2: (
     color: nth($colors, 3),
-    font-size: 16px,
+    font-size: 18px,
     font-weight: normal,
 );
 
 $parraf3: (
-    color: $color-h,
-    font-size: 18px,
+    color: nth($colors, 3),
+    font-size: 16px,
     font-weight: normal,
 );
 
