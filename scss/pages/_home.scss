@@ -1,0 +1,36 @@
+@import '../utilities/list';
+@import '../base/typo';
+@import '../utilities/extends';
+
+.main-index {
+    @extend %flex-2;
+    margin: 5px;
+    padding: 10px;
+
+    .parrafo-main-index {
+        h1 {
+            color: map-get($h1, color);
+            font-size: map-get($h1, font-size);
+            font-weight: map-get($h1, font-weight);
+        }
+
+        p {
+            text-align: justify;
+            color: map-get($parraf, color);
+            font-size: map-get($parraf, font-size);
+            font-weight: map-get($parraf, font-weight);
+            padding-right: 15px;
+        }
+    }
+
+    .img-main-index {
+        img {
+            border-radius: 5px;
+            @extend %sombras;            
+        }
+    }
+}
+
+.section-bodegas {
+    
+}
