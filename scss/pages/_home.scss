@@ -1,14 +1,18 @@
 @import '../utilities/list';
 @import '../base/typo';
 @import '../utilities/extends';
+@import '../components/carousel';
 
 .main-index {
     @extend %flex-2;
     margin: 5px;
     padding: 10px;
+    height: 800px;
+    
 
     .parrafo-main-index {
         h1 {
+            text-align: center;
             color: map-get($h1, color);
             font-size: map-get($h1, font-size);
             font-weight: map-get($h1, font-weight);
@@ -19,18 +23,66 @@
             color: map-get($parraf, color);
             font-size: map-get($parraf, font-size);
             font-weight: map-get($parraf, font-weight);
+            word-spacing: map-get($parraf, word-spacing);
             padding-right: 15px;
         }
     }
 
     .img-main-index {
         img {
-            border-radius: 5px;
-            @extend %sombras;            
+            border-radius: 10px;
+            @extend %sombras;
         }
     }
 }
 
 .section-bodegas {
-    
+    @extend %flex-2;
+    margin: 5px;
+    padding: 10px;
+    height: 800px;
+
+    .detalle-bodegas {
+        width: 50%;
+        text-align: justify;
+        padding-left: 10px;
+
+        h2 {
+            text-align: center;
+            color: map-get($h2, color);
+            font-size: map-get($h2, font-size);
+            font-weight: map-get($h2, font-weight);
+            padding-bottom: 10px;
+        }
+
+        p {
+            color: map-get($parraf2, color);
+            font-size: map-get($parraf2, font-size);
+            font-weight: map-get($parraf2, font-weight);
+            word-spacing: map-get($parraf, word-spacing);
+        }
+    }
+}
+
+.iframe-mendoza {
+    @extend %flex-3;
+    height: 800px;  
+    justify-content: center; 
+
+    h2 {
+        padding-bottom: 20px;
+        text-align: center;
+        color: map-get($h2, color);
+        font-size: map-get($h2, font-size);
+        font-weight: map-get($h2, font-weight);
+    }
+
+    .video-mendoza {
+        iframe {
+            border-radius: 10px;
+            @extend %sombras;
+            width: 900px;
+            height: 600px;           
+        }
+    }
 }

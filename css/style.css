@@ -12,6 +12,7 @@
 }
 .navbar-mia .container-fluid .navbar-nav a {
   color: white;
+  font-size: large;
 }
 .navbar-mia .container-fluid .navbar-nav a:hover {
   color: #ff52a8;
@@ -43,21 +44,89 @@
   flex-wrap: wrap;
 }
 
-.main-index {
+.main-mendoza {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobre-nosotros .yo, .contrataciones .img-contrataciones, .section-bodegas, .main-index {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 
-.main-index .img-main-index img {
+.formulario, .contrataciones, .iframe-mendoza {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-contacto .mapa-ubicacion iframe, .sobre-nosotros .yo img, .contrataciones .img-contrataciones img, .main-ruta-vino img, .zonas-mendoza .card, .iframe-mendoza .video-mendoza iframe, .main-index .img-main-index img, .carrusel-mio .carrusel-fotos-mio {
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.3), 0.3em 0.3em 3em rgba(0, 0, 0, 0.5);
+}
+
+.main-mendoza {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobre-nosotros .yo, .contrataciones .img-contrataciones, .section-bodegas, .main-index {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario, .contrataciones, .iframe-mendoza {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-contacto .mapa-ubicacion iframe, .sobre-nosotros .yo img, .contrataciones .img-contrataciones img, .main-ruta-vino img, .zonas-mendoza .card, .iframe-mendoza .video-mendoza iframe, .main-index .img-main-index img, .carrusel-mio .carrusel-fotos-mio {
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.3), 0.3em 0.3em 3em rgba(0, 0, 0, 0.5);
+}
+
+.carrusel-mio {
+  width: 50%;
+  padding-right: 10px;
+}
+.carrusel-mio .indicador-mio {
+  background-color: #000000 !important;
+  background-clip: border-box !important;
+  width: 20px !important;
+  height: 5px !important;
+  border: 2px solid !important;
+}
+.carrusel-mio .carrusel-fotos-mio {
+  border-radius: 10px;
+}
+@media (max-width: 1200px) {
+  .carrusel-mio {
+    width: 55%;
+  }
+}
+@media (max-width: 1024px) {
+  .carrusel-mio {
+    width: auto;
+    padding: 0;
+  }
 }
 
 .main-index {
   margin: 5px;
   padding: 10px;
+  height: 800px;
 }
 .main-index .parrafo-main-index h1 {
+  text-align: center;
   color: #000000;
   font-size: 30px;
   font-weight: bolder;
@@ -67,10 +136,320 @@
   color: #000000;
   font-size: 20px;
   font-weight: normal;
+  word-spacing: 4px;
   padding-right: 15px;
 }
 .main-index .img-main-index img {
-  border-radius: 5px;
+  border-radius: 10px;
+}
+
+.section-bodegas {
+  margin: 5px;
+  padding: 10px;
+  height: 800px;
+}
+.section-bodegas .detalle-bodegas {
+  width: 50%;
+  text-align: justify;
+  padding-left: 10px;
+}
+.section-bodegas .detalle-bodegas h2 {
+  text-align: center;
+  color: #000000;
+  font-size: 24px;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+.section-bodegas .detalle-bodegas p {
+  color: #000000;
+  font-size: 18px;
+  font-weight: normal;
+  word-spacing: 4px;
+}
+
+.iframe-mendoza {
+  height: 800px;
+  justify-content: center;
+}
+.iframe-mendoza h2 {
+  padding-bottom: 20px;
+  text-align: center;
+  color: #000000;
+  font-size: 24px;
+  font-weight: normal;
+}
+.iframe-mendoza .video-mendoza iframe {
+  border-radius: 10px;
+  width: 900px;
+  height: 600px;
+}
+
+.main-mendoza {
+  margin: 5px;
+  padding: 10px;
+  height: 600px;
+}
+.main-mendoza h1 {
+  padding-bottom: 10px;
+  color: #000000;
+  font-size: 30px;
+  font-weight: bolder;
+}
+.main-mendoza p {
+  text-align: justify;
+  color: #000000;
+  font-size: 20px;
+  font-weight: normal;
+  word-spacing: 4px;
+}
+
+.zonas-mendoza {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "";
+  gap: 15px;
+  padding: 40px;
+  text-align: justify;
+}
+.zonas-mendoza div {
+  border-radius: 20px;
+  transition: all 400ms;
+}
+.zonas-mendoza div:hover {
+  transform: scale(1.01);
+  background-color: white;
+}
+.zonas-mendoza .card {
+  border: solid 1px black;
+  height: 100%;
+}
+.zonas-mendoza .card img {
+  border-radius: 20px;
+}
+.zonas-mendoza .card-body {
+  color: #000000;
+  font-size: 16px;
+  font-weight: normal;
+  word-spacing: 4px;
+}
+.zonas-mendoza .card-body h2 {
+  text-align: center;
+  color: #000000;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.main-ruta-vino {
+  margin: 20px 5px;
+  padding: 10px;
+  height: 900px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
+  grid-template-rows: 0.2fr 0.7fr 0.3fr 0.3fr;
+  grid-template-areas: "titulo-grid titulo-grid titulo-grid titulo-grid" "parraf-main parraf-main foto-main foto-main" "parraf-main parraf-main ruta1 ruta2" "parraf-main parraf-main ruta3 ruta4";
+  gap: 5px;
+}
+.main-ruta-vino h1 {
+  grid-area: titulo-grid;
+  text-align: center;
+  padding-bottom: 10px;
+  color: #000000;
+  font-size: 30px;
+  font-weight: bolder;
+}
+.main-ruta-vino p {
+  grid-area: parraf-main;
+  text-align: justify;
+  text-align: justify;
+  color: #000000;
+  font-size: 20px;
+  font-weight: normal;
+  word-spacing: 4px;
+  padding: 10px;
+}
+.main-ruta-vino img {
+  margin: 5px;
+  border-radius: 10px;
+}
+.main-ruta-vino .img-main-ruta {
+  grid-area: foto-main;
+  align-self: center;
+  justify-self: center;
+}
+.main-ruta-vino .img-ruta1 {
+  grid-area: ruta1;
+  align-self: center;
+  justify-self: center;
+}
+.main-ruta-vino .img-ruta2 {
+  grid-area: ruta2;
+  align-self: center;
+  justify-self: center;
+}
+.main-ruta-vino .img-ruta3 {
+  grid-area: ruta3;
+  align-self: center;
+  justify-self: center;
+}
+.main-ruta-vino .img-ruta4 {
+  grid-area: ruta4;
+  align-self: center;
+  justify-self: center;
+}
+
+.contrataciones {
+  height: 1100px;
+}
+.contrataciones h2 {
+  text-align: center;
+  padding-bottom: 10px;
+  color: #000000;
+  font-size: 24px;
+  font-weight: normal;
+}
+.contrataciones .img-contrataciones img {
+  width: 45%;
+  border-radius: 15px;
+  margin: 5px;
+}
+.contrataciones .descripcion-contrataciones {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 0.3fr 1.5fr;
+  grid-template-areas: "tour alojamiento" "p-tour-bici p-alojamiento";
+  gap: 20px;
+  margin: 5px;
+}
+.contrataciones .tour {
+  grid-area: tour;
+  text-align: center;
+  color: #000000;
+  font-size: 20px;
+  font-weight: normal;
+}
+.contrataciones .p-tour-bici {
+  grid-area: p-tour-bici;
+  text-align: justify;
+  color: #000000;
+  font-size: 18px;
+  font-weight: normal;
+  word-spacing: 4px;
+}
+.contrataciones .alojamiento {
+  grid-area: alojamiento;
+  text-align: center;
+  color: #000000;
+  font-size: 20px;
+  font-weight: normal;
+}
+.contrataciones .p-alojamiento {
+  grid-area: p-alojamiento;
+  text-align: justify;
+  color: #000000;
+  font-size: 18px;
+  font-weight: normal;
+  word-spacing: 4px;
+}
+
+.map {
+  height: 700px;
+}
+.map iframe {
+  width: 100%;
+  height: 80%;
+}
+
+.sobre-nosotros {
+  margin: 5px;
+  padding: 10px;
+}
+.sobre-nosotros .titulo {
+  text-align: center;
+  padding-bottom: 10px;
+  color: #000000;
+  font-size: 30px;
+  font-weight: bolder;
+}
+.sobre-nosotros .yo {
+  align-items: center;
+}
+.sobre-nosotros .yo p {
+  text-align: justify;
+  padding-right: 10px;
+  color: #000000;
+  font-size: 20px;
+  font-weight: normal;
+  word-spacing: 4px;
+}
+.sobre-nosotros .yo img {
+  margin-left: 10px;
+  border-radius: 15px;
+}
+
+.main-mendoza {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-index, .section-bodegas, .contrataciones .img-contrataciones, .sobre-nosotros .yo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario, .iframe-mendoza, .contrataciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-contacto .mapa-ubicacion iframe, .carrusel-mio .carrusel-fotos-mio, .main-index .img-main-index img, .iframe-mendoza .video-mendoza iframe, .zonas-mendoza .card, .main-ruta-vino img, .contrataciones .img-contrataciones img, .sobre-nosotros .yo img {
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.3), 0.3em 0.3em 3em rgba(0, 0, 0, 0.5);
+}
+
+.formulario {
+  grid-area: formulario;
+  text-align: center;
+}
+.main-contacto {
+  margin: 5px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50px 500px;
+  grid-template-areas: "titulo-contacto titulo-ubicacion" "formulario mapa";
+  align-items: center;
+}
+.main-contacto .titulo-contacto {
+  grid-area: titulo-contacto;
+  text-align: center;
+  text-align: center;
+  padding-bottom: 10px;
+  color: #000000;
+  font-size: 30px;
+  font-weight: bolder;
+}
+.main-contacto .titulo-ubicacion {
+  grid-area: titulo-ubicacion;
+  text-align: center;
+  text-align: center;
+  padding-bottom: 10px;
+  color: #000000;
+  font-size: 24px;
+  font-weight: normal;
+}
+.main-contacto .mapa-ubicacion {
+  grid-area: mapa;
+  text-align: center;
+}
+.main-contacto .mapa-ubicacion iframe {
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

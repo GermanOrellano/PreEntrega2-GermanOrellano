@@ -1,0 +1,32 @@
+.sobre-nosotros {
+    margin: 5px;
+    padding: 10px;
+
+    .titulo {
+        text-align: center;
+        padding-bottom: 10px;
+        color: map-get($h1, color);
+        font-size: map-get($h1, font-size);
+        font-weight: map-get($h1, font-weight);
+    }
+
+    .yo {
+        @extend %flex-2;
+        align-items: center;
+
+        p {
+            text-align: justify;
+            padding-right: 10px;
+            color: map-get($parraf, color);
+            font-size: map-get($parraf, font-size);
+            font-weight: map-get($parraf, font-weight);
+            word-spacing: map-get($parraf, word-spacing);
+        }
+
+        img {
+            margin-left: 10px;
+            border-radius: 15px;
+            @extend %sombras;
+        }
+    }
+}
