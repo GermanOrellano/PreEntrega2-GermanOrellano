@@ -7,19 +7,24 @@
     height: 900px;
     align-items: center;
 
-    @include nueva-grilla (1fr 1fr 0.5fr 0.5fr, 0.2fr 0.7fr 0.3fr 0.3fr,
+    @include nueva-grilla (1fr 1fr 0.5fr 0.5fr, 0.2fr 0.1fr 0.7fr 0.3fr 0.3fr,
         "titulo-grid titulo-grid titulo-grid titulo-grid"
+        "divisor divisor divisor divisor"
         "parraf-main parraf-main foto-main foto-main"
         "parraf-main parraf-main ruta1 ruta2"
         "parraf-main parraf-main ruta3 ruta4");
     gap: 5px;
 
     h1 {
-        @include grillas-text (titulo-grid, center);
+        @include grillas-text (titulo-grid, left);
         padding-bottom: 10px;
         color: map-get($h1, color);
         font-size: map-get($h1, font-size);
         font-weight: map-get($h1, font-weight);
+    }
+
+    .divisor {
+        @extend %divisor;
     }
 
     p {
@@ -62,13 +67,20 @@
 .contrataciones {
     @extend %flex-3;
     height: 1100px;
+    margin: 0 5px;
+    padding: 10px;
+
 
     h2 {
-        text-align: center;
+        text-align: left;
         padding-bottom: 10px;
         color: map-get($h2, color);
         font-size: map-get($h2, font-size);
         font-weight: map-get($h2, font-weight);
+    }
+
+    .divisor {
+        @extend %divisor;
     }
 
     .img-contrataciones {

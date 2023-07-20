@@ -11,8 +11,11 @@
     
 
     .parrafo-main-index {
+        .divisor {
+            @extend %divisor;
+        }
+
         h1 {
-            text-align: center;
             color: map-get($h1, color);
             font-size: map-get($h1, font-size);
             font-weight: map-get($h1, font-weight);
@@ -48,11 +51,14 @@
         padding-left: 10px;
 
         h2 {
-            text-align: center;
             color: map-get($h2, color);
             font-size: map-get($h2, font-size);
             font-weight: map-get($h2, font-weight);
             padding-bottom: 10px;
+        }
+
+        .divisor {
+            @extend %divisor;
         }
 
         p {
@@ -66,8 +72,8 @@
 
 .iframe-mendoza {
     @extend %flex-3;
-    height: 800px;  
-    justify-content: center; 
+    height: 700px;  
+    align-items: center;
 
     h2 {
         padding-bottom: 20px;

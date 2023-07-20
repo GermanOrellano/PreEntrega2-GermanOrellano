@@ -1,21 +1,29 @@
 .navbar-mia {
     display: flex;
     flex-direction: row;
+    padding: 2em;
 
     .container-fluid {
-
         .navbar-toggler {
             background-image: radial-gradient(#ffffff7a, #42414155);
         }
 
-
         .navbar-nav {
+
+            .active {
+                color: #ff52a8;
+            }
+
             a {
+                margin: 10px;
                 color: #ffff;
                 font-size: large;
 
                 &:hover {
+                    background-color: #161616bd;
+                    border-radius: 20px;
                     color: #ff52a8;
+                    transition: ease-in .2s;
                 }
             }
         }

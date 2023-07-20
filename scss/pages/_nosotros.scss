@@ -10,6 +10,10 @@
         font-weight: map-get($h1, font-weight);
     }
 
+    .divisor {
+        @extend %divisor;
+    }
+
     .yo {
         @extend %flex-2;
         align-items: center;

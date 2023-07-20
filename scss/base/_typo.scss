@@ -1,6 +1,7 @@
 @import '../utilities/variables';
 @import '../utilities/list';
 
+
 //Se crean mapas para los distintos títulos
 $h1: (
     color: nth($colors, 3),
@@ -34,21 +35,21 @@ $h5: (
 
 $parraf:(
     color: nth($colors, 3),
-    font-size: 20px,
+    font-size: 18px,
     font-weight: normal,
     word-spacing: 4px,
 );
 
 $parraf2: (
     color: nth($colors, 3),
-    font-size: 18px,
+    font-size: 16px,
     font-weight: normal,
     word-spacing: 4px,
 );
 
 $parraf3: (
     color: nth($colors, 3),
-    font-size: 16px,
+    font-size: 14px,
     font-weight: normal,
     word-spacing: 4px,
 );
