@@ -27,14 +27,14 @@
 
 %divisor {
     height: 6px;
-            width: 180px;
-            background-color: #ff52a8;
-            margin-top: 10px;
-            margin-bottom: 3em;
-            border-radius: 10px;
-            transition: all 400ms;
+    width: 180px;
+    background-color: #ff52a8;
+    margin-top: 10px;
+    margin-bottom: 3em;
+    border-radius: 10px;
+    transition: all 400ms;
 
-            &:hover {
-                width: 550px;
-            }
+    &:hover {
+        width: 550px;
+    }
 }

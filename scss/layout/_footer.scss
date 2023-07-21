@@ -20,4 +20,20 @@
         align-content: center;
         flex-wrap: wrap;
     }
+
+    @media(max-width: 768px) {
+        font-size: smaller;
+    }
+
+    @media(max-width: 425px) {
+        height: 110px;
+        font-size: x-small;
+
+        .iconos-footer{
+            img {
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
 }

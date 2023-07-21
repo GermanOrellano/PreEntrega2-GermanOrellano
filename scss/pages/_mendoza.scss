@@ -8,7 +8,6 @@
     height: 600px;
 
     h1 {
-        padding-bottom: 10px;
         color: map-get($h1, color);
         font-size: map-get($h1, font-size);
         font-weight: map-get($h1, font-weight);

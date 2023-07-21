@@ -26,11 +26,69 @@
   color: #ff52a8;
   transition: ease-in 0.2s;
 }
+@media (max-width: 768px) {
+  .navbar-mia .container-fluid .navbar-nav a {
+    font-size: smaller;
+  }
+  .navbar-mia .container-fluid .navbar-toggler {
+    width: 45px;
+    height: 35px;
+  }
+  .navbar-mia .container-fluid .navbar-toggler .navbar-toggler-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .navbar-mia .container-fluid .navbar-nav a {
+    margin: 5px;
+    font-size: x-small;
+  }
+  .navbar-mia .container-fluid .navbar-toggler {
+    width: 40px;
+    height: 30px;
+  }
+  .navbar-mia .container-fluid .navbar-toggler .navbar-toggler-icon {
+    width: 15px;
+    height: 15px;
+  }
+}
+@media (max-width: 375px) {
+  .navbar-mia .container-fluid .navbar-nav a {
+    margin: 3px;
+    font-size: xx-small;
+  }
+  .navbar-mia .container-fluid .navbar-toggler {
+    width: 35px;
+    height: 25px;
+    padding: 0;
+  }
+  .navbar-mia .container-fluid .navbar-toggler .navbar-toggler-icon {
+    width: 13px;
+    height: 13px;
+  }
+}
 
 .container-header {
   height: 750px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url("../img/mendoza-portada-index.jpg");
   background-size: cover;
+}
+@media (max-width: 768px) {
+  .container-header {
+    height: 490px;
+    background-size: 100%;
+  }
+}
+@media (max-width: 425px) {
+  .container-header {
+    height: 270px;
+  }
+}
+@media (max-width: 375px) {
+  .container-header {
+    height: 230px;
+  }
 }
 
 .footer {
@@ -52,6 +110,21 @@
   align-content: center;
   flex-wrap: wrap;
 }
+@media (max-width: 768px) {
+  .footer {
+    font-size: smaller;
+  }
+}
+@media (max-width: 425px) {
+  .footer {
+    height: 110px;
+    font-size: x-small;
+  }
+  .footer .iconos-footer img {
+    width: 15px;
+    height: 15px;
+  }
+}
 
 .main-mendoza {
   display: flex;
@@ -68,7 +141,7 @@
   align-items: center;
 }
 
-.formulario, .contrataciones, .iframe-mendoza {
+.formulario, .map, .contrataciones, .iframe-mendoza {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -78,7 +151,7 @@
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.3), 0.3em 0.3em 3em rgba(0, 0, 0, 0.5);
 }
 
-.sobre-nosotros .divisor, .contrataciones .divisor, .main-ruta-vino .divisor, .main-mendoza .divisor, .section-bodegas .detalle-bodegas .divisor, .main-index .parrafo-main-index .divisor {
+.sobre-nosotros .divisor, .contrataciones .divisor, .main-ruta-vino .divisor, .main-mendoza .divisor, .iframe-mendoza .divisor, .section-bodegas .detalle-bodegas .divisor, .main-index .parrafo-main-index .divisor {
   height: 6px;
   width: 180px;
   background-color: #ff52a8;
@@ -87,7 +160,7 @@
   border-radius: 10px;
   transition: all 400ms;
 }
-.sobre-nosotros .divisor:hover, .contrataciones .divisor:hover, .main-ruta-vino .divisor:hover, .main-mendoza .divisor:hover, .section-bodegas .detalle-bodegas .divisor:hover, .main-index .parrafo-main-index .divisor:hover {
+.sobre-nosotros .divisor:hover, .contrataciones .divisor:hover, .main-ruta-vino .divisor:hover, .main-mendoza .divisor:hover, .iframe-mendoza .divisor:hover, .section-bodegas .detalle-bodegas .divisor:hover, .main-index .parrafo-main-index .divisor:hover {
   width: 550px;
 }
 
@@ -106,7 +179,7 @@
   align-items: center;
 }
 
-.formulario, .contrataciones, .iframe-mendoza {
+.formulario, .map, .contrataciones, .iframe-mendoza {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -116,7 +189,7 @@
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.3), 0.3em 0.3em 3em rgba(0, 0, 0, 0.5);
 }
 
-.sobre-nosotros .divisor, .contrataciones .divisor, .main-ruta-vino .divisor, .main-mendoza .divisor, .section-bodegas .detalle-bodegas .divisor, .main-index .parrafo-main-index .divisor {
+.sobre-nosotros .divisor, .contrataciones .divisor, .main-ruta-vino .divisor, .main-mendoza .divisor, .iframe-mendoza .divisor, .section-bodegas .detalle-bodegas .divisor, .main-index .parrafo-main-index .divisor {
   height: 6px;
   width: 180px;
   background-color: #ff52a8;
@@ -125,7 +198,7 @@
   border-radius: 10px;
   transition: all 400ms;
 }
-.sobre-nosotros .divisor:hover, .contrataciones .divisor:hover, .main-ruta-vino .divisor:hover, .main-mendoza .divisor:hover, .section-bodegas .detalle-bodegas .divisor:hover, .main-index .parrafo-main-index .divisor:hover {
+.sobre-nosotros .divisor:hover, .contrataciones .divisor:hover, .main-ruta-vino .divisor:hover, .main-mendoza .divisor:hover, .iframe-mendoza .divisor:hover, .section-bodegas .detalle-bodegas .divisor:hover, .main-index .parrafo-main-index .divisor:hover {
   width: 550px;
 }
 
@@ -176,11 +249,84 @@
 .main-index .img-main-index img {
   border-radius: 10px;
 }
+@media (max-width: 1200px) {
+  .main-index .parrafo-main-index h1 {
+    font-size: 28px;
+  }
+  .main-index .parrafo-main-index p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1024px) {
+  .main-index {
+    flex-direction: column !important;
+    height: 1200px;
+  }
+  .main-index img {
+    height: 550px;
+  }
+}
+@media (max-width: 768px) {
+  .main-index {
+    height: 1000px;
+  }
+  .main-index .parrafo-main-index h1 {
+    font-size: 24px;
+  }
+  .main-index .parrafo-main-index p {
+    font-size: 12px;
+    padding: 0;
+  }
+  .main-index img {
+    height: 450px;
+    padding: 0;
+  }
+  .main-index .divisor {
+    height: 4px !important;
+  }
+}
+@media (max-width: 425px) {
+  .main-index {
+    height: 1300px;
+  }
+  .main-index .parrafo-main-index h1 {
+    font-size: 20px;
+  }
+  .main-index .parrafo-main-index p {
+    font-size: 12px;
+  }
+  .main-index img {
+    height: 400px;
+  }
+  .main-index .divisor {
+    height: 3px !important;
+    width: 140px !important;
+  }
+  .main-index .divisor:hover {
+    width: 380px !important;
+  }
+}
+@media (max-width: 375px) {
+  .main-index {
+    height: 1250px;
+  }
+  .main-index img {
+    height: 350px;
+  }
+  .main-index .divisor {
+    height: 2px !important;
+    width: 120px !important;
+  }
+  .main-index .divisor:hover {
+    width: 330px !important;
+  }
+}
 
 .section-bodegas {
   margin: 5px;
   padding: 10px;
   height: 800px;
+  background-color: #494949;
 }
 .section-bodegas .detalle-bodegas {
   width: 50%;
@@ -188,24 +334,85 @@
   padding-left: 10px;
 }
 .section-bodegas .detalle-bodegas h2 {
-  color: #000000;
+  color: white;
   font-size: 24px;
   font-weight: normal;
-  padding-bottom: 10px;
 }
 .section-bodegas .detalle-bodegas p {
-  color: #000000;
+  color: white;
   font-size: 16px;
   font-weight: normal;
   word-spacing: 4px;
 }
+@media (max-width: 1200px) {
+  .section-bodegas .detalle-bodegas h2 {
+    font-size: 22px;
+  }
+  .section-bodegas .detalle-bodegas p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1024px) {
+  .section-bodegas .carrusel-mio {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .section-bodegas {
+    height: 600px;
+  }
+  .section-bodegas .detalle-bodegas h2 {
+    font-size: 18px;
+  }
+  .section-bodegas .detalle-bodegas p {
+    font-size: 12px;
+  }
+  .section-bodegas .detalle-bodegas .divisor {
+    height: 4px !important;
+  }
+}
+@media (max-width: 425px) {
+  .section-bodegas {
+    flex-direction: column-reverse !important;
+    height: 800px;
+  }
+  .section-bodegas .detalle-bodegas {
+    width: auto;
+    padding: 0;
+  }
+  .section-bodegas .detalle-bodegas h2 {
+    font-size: 16px;
+  }
+  .section-bodegas .detalle-bodegas p {
+    font-size: 10px;
+  }
+  .section-bodegas .detalle-bodegas .divisor {
+    height: 3px !important;
+    width: 140px !important;
+  }
+  .section-bodegas .detalle-bodegas .divisor:hover {
+    width: 380px !important;
+  }
+  .section-bodegas .carrusel-mio {
+    width: auto;
+    padding: 0;
+  }
+}
+@media (max-width: 375px) {
+  .section-bodegas .detalle-bodegas .divisor {
+    height: 2px !important;
+    width: 120px !important;
+  }
+  .section-bodegas .detalle-bodegas .divisor:hover {
+    width: 330px !important;
+  }
+}
 
 .iframe-mendoza {
-  height: 700px;
+  height: 800px;
   align-items: center;
 }
 .iframe-mendoza h2 {
-  padding-bottom: 20px;
   text-align: center;
   color: #000000;
   font-size: 24px;
@@ -216,6 +423,65 @@
   width: 900px;
   height: 600px;
 }
+@media (max-width: 1200px) {
+  .iframe-mendoza h2 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1024px) {
+  .iframe-mendoza .video-mendoza iframe {
+    width: 800px;
+  }
+}
+@media (max-width: 768px) {
+  .iframe-mendoza {
+    height: 700px;
+  }
+  .iframe-mendoza h2 {
+    font-size: 18px;
+  }
+  .iframe-mendoza .divisor {
+    height: 4px !important;
+  }
+  .iframe-mendoza .video-mendoza iframe {
+    width: 700px;
+    height: 500px;
+  }
+}
+@media (max-width: 425px) {
+  .iframe-mendoza {
+    height: 350px;
+  }
+  .iframe-mendoza h2 {
+    font-size: 16px;
+  }
+  .iframe-mendoza .divisor {
+    margin-top: 5px !important;
+    margin-bottom: 1em !important;
+    height: 3px !important;
+    width: 140px !important;
+  }
+  .iframe-mendoza .divisor:hover {
+    width: 380px !important;
+  }
+  .iframe-mendoza .video-mendoza iframe {
+    width: 380px;
+    height: 200px;
+  }
+}
+@media (max-width: 375px) {
+  .iframe-mendoza .divisor {
+    height: 2px !important;
+    width: 120px !important;
+  }
+  .iframe-mendoza .divisor:hover {
+    width: 330px !important;
+  }
+  .iframe-mendoza .video-mendoza iframe {
+    width: 330px;
+    height: 180px;
+  }
+}
 
 .main-mendoza {
   margin: 5px;
@@ -223,7 +489,6 @@
   height: 600px;
 }
 .main-mendoza h1 {
-  padding-bottom: 10px;
   color: #000000;
   font-size: 30px;
   font-weight: bolder;
@@ -280,14 +545,13 @@
   align-items: center;
   display: grid;
   grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
-  grid-template-rows: 0.2fr 0.1fr 0.7fr 0.3fr 0.3fr;
+  grid-template-rows: 0.1fr 0.1fr 0.7fr 0.3fr 0.3fr;
   grid-template-areas: "titulo-grid titulo-grid titulo-grid titulo-grid" "divisor divisor divisor divisor" "parraf-main parraf-main foto-main foto-main" "parraf-main parraf-main ruta1 ruta2" "parraf-main parraf-main ruta3 ruta4";
   gap: 5px;
 }
 .main-ruta-vino h1 {
   grid-area: titulo-grid;
   text-align: left;
-  padding-bottom: 10px;
   color: #000000;
   font-size: 30px;
   font-weight: bolder;
@@ -336,11 +600,11 @@
   height: 1100px;
   margin: 0 5px;
   padding: 10px;
+  background-color: #494949;
 }
 .contrataciones h2 {
   text-align: left;
-  padding-bottom: 10px;
-  color: #000000;
+  color: white;
   font-size: 24px;
   font-weight: normal;
 }
@@ -360,14 +624,14 @@
 .contrataciones .tour {
   grid-area: tour;
   text-align: center;
-  color: #000000;
+  color: white;
   font-size: 20px;
   font-weight: normal;
 }
 .contrataciones .p-tour-bici {
   grid-area: p-tour-bici;
   text-align: justify;
-  color: #000000;
+  color: white;
   font-size: 16px;
   font-weight: normal;
   word-spacing: 4px;
@@ -375,14 +639,14 @@
 .contrataciones .alojamiento {
   grid-area: alojamiento;
   text-align: center;
-  color: #000000;
+  color: white;
   font-size: 20px;
   font-weight: normal;
 }
 .contrataciones .p-alojamiento {
   grid-area: p-alojamiento;
   text-align: justify;
-  color: #000000;
+  color: white;
   font-size: 16px;
   font-weight: normal;
   word-spacing: 4px;
@@ -401,8 +665,6 @@
   padding: 10px;
 }
 .sobre-nosotros .titulo {
-  text-align: center;
-  padding-bottom: 10px;
   color: #000000;
   font-size: 30px;
   font-weight: bolder;
@@ -438,7 +700,7 @@
   align-items: center;
 }
 
-.formulario, .iframe-mendoza, .contrataciones {
+.formulario, .iframe-mendoza, .contrataciones, .map {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -448,7 +710,7 @@
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.3), 0.3em 0.3em 3em rgba(0, 0, 0, 0.5);
 }
 
-.main-index .parrafo-main-index .divisor, .section-bodegas .detalle-bodegas .divisor, .main-mendoza .divisor, .main-ruta-vino .divisor, .contrataciones .divisor, .sobre-nosotros .divisor {
+.main-index .parrafo-main-index .divisor, .section-bodegas .detalle-bodegas .divisor, .iframe-mendoza .divisor, .main-mendoza .divisor, .main-ruta-vino .divisor, .contrataciones .divisor, .sobre-nosotros .divisor {
   height: 6px;
   width: 180px;
   background-color: #ff52a8;
@@ -457,7 +719,7 @@
   border-radius: 10px;
   transition: all 400ms;
 }
-.main-index .parrafo-main-index .divisor:hover, .section-bodegas .detalle-bodegas .divisor:hover, .main-mendoza .divisor:hover, .main-ruta-vino .divisor:hover, .contrataciones .divisor:hover, .sobre-nosotros .divisor:hover {
+.main-index .parrafo-main-index .divisor:hover, .section-bodegas .detalle-bodegas .divisor:hover, .iframe-mendoza .divisor:hover, .main-mendoza .divisor:hover, .main-ruta-vino .divisor:hover, .contrataciones .divisor:hover, .sobre-nosotros .divisor:hover {
   width: 550px;
 }
 

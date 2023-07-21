@@ -4,4 +4,17 @@
     height: 750px;
     background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url("../img/mendoza-portada-index.jpg");
     background-size: cover;
+
+    @media(max-width:768px) {
+        height: 490px;
+        background-size: 100%;
+    }
+
+    @media(max-width: 425px) {
+        height: 270px;
+    }
+
+    @media(max-width: 375px) {
+        height: 230px;
+    }
 }
