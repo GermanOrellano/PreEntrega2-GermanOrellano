@@ -1,196 +1,97 @@
-@import '../base/typo';
-@import '../utilities/variables';
 @import '../utilities/list';
+@import '../base/typo';
 @import '../utilities/extends';
-@import '../utilities/mixins';
-
 @import '../components/carousel';
 
 .main-index {
-    background-color: $color-ppl;
+    @extend %flex-2;
     margin: 5px;
     padding: 10px;
-    border-radius: 10px;
-    @include nueva-grilla(2fr 1fr, 1fr, "");
-    gap: 1rem;
+    height: 800px;
 
-    h1 {
-        text-align: center;
-        color: map-get($h1, color);
-        font-size: map-get($h1, font-size);
-        font-weight: map-get($h1, font-weight);
-    }
 
-    p {
-        text-align: justify;
-        color: map-get($parraf, color);
-        font-size: map-get($parraf, font-size);
-        font-weight: map-get($parraf, font-weight);
-    }
+    .parrafo-main-index {
+        .divisor {
+            @extend %divisor;
+        }
 
-    img {
-        width: auto;
-        height: auto;
-        border-radius: 20px;
-        @extend %sombras;
-    }
-
-    @media (max-width:1200px) {
         h1 {
-            font-size: 28px;
+            color: map-get($h1, color);
+            font-size: map-get($h1, font-size);
+            font-weight: map-get($h1, font-weight);
         }
 
         p {
-            font-size: 17px;
+            text-align: justify;
+            color: map-get($parraf, color);
+            font-size: map-get($parraf, font-size);
+            font-weight: map-get($parraf, font-weight);
+            word-spacing: map-get($parraf, word-spacing);
+            padding-right: 15px;
         }
+    }
 
+    .img-main-index {
         img {
-            width: 425px;
+            border-radius: 10px;
+            @extend %sombras;
+        }
+    }
+
+    @media (max-width:1200px) {
+        .parrafo-main-index {
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 16px;
+            }
         }
     }
 
     @media (max-width:1024px) {
-        h1 {
-            font-size: 27px;
-        }
-
-        p {
-            font-size: 15px;
-        }
+        flex-direction: column !important;
+        height: 1200px;
 
         img {
-            width: 415px;
+            height: 550px;
         }
     }
 
     @media (max-width:768px) {
-        h1 {
-            font-size: 22px;
-        }
+        height: 1000px;
 
-        p {
-            font-size: 12px;
-        }
-
-        img {
-            width: 380px;
-        }
-    }
-
-    @media (max-width:600px) {
-
-        justify-items: center;
-        align-items: center;
-
-        h1 {
-            font-size: 21px;
-        }
-
-        @include nueva-grilla(1fr, 1fr 1fr, "");
-        gap: 0.5rem;
-
-        p {
-            font-size: 11px;
-        }
-
-        img {
-            width: auto;
-            height: 400px;
-        }
-    }
-
-    @media (max-width:480px) {
-
-        justify-items: center;
-        align-items: center;
-
-        h1 {
-            font-size: 20px;
-        }
-
-        @include nueva-grilla(1fr, 1fr 0.5fr, "");
-
-        p {
-            font-size: 10px;
-        }
-
-        img {
-            width: auto;
-            height: 350px;
-        }
-    }
-
-    @media (max-width:320px) {
-
-        justify-items: center;
-        align-items: center;
-
-        h1 {
-            font-size: 18px;
-        }
-
-        @include nueva-grilla(1fr, 0.5fr 1fr, "");
-
-        p {
-            font-size: 8px;
-        }
-
-        img {
-            width: auto;
-            height: 320px;
-        }
-    }
-
-}
-
-.section-bodegas {
-    margin: 5px 10px;
-    padding: 15px;
-    background-color: nth($colors , 1);
-    @extend %flex-2;
-
-    .detalle-bodegas {
-        color: map-get($parraf, color);
-        font-size: map-get($parraf, font-size);
-        font-weight: map-get($parraf, font-weight);
-        width: 45%;
-        text-align: justify;
-        padding-left: 20px;
-
-        h2 {
-            color: map-get($h2, color);
-            font-size: map-get($h2, font-size);
-            font-weight: map-get($h2, font-weight);
-            text-align: center;
-            padding-bottom: 15px;
-        }
-
-        @media(max-width:1200px) {
-            h2 {
-                font-size: 22px;
+        .parrafo-main-index {
+            h1 {
+                font-size: 24px;
             }
 
             p {
-                font-size: 17px;
+                font-size: 12px;
+                padding: 0;
             }
         }
 
-        @media(max-width:1024px) {
-            width: auto;
-            margin-top: 15px;
+        img {
+            height: 450px;
             padding: 0;
-
-            h2 {
-                font-size: 21px;
-            }
-
-            p {
-                font-size: 15px;
-            }
         }
 
-        @media(max-width:768px) {
-            h2 {
+        .divisor {
+            height: 4px !important;
+
+            &:hover {
+                width: 500px !important;
+            }
+        }
+    }
+
+    @media (max-width:425px) {
+        height: 1300px;
+
+        .parrafo-main-index {
+            h1 {
                 font-size: 20px;
             }
 
@@ -199,114 +100,251 @@
             }
         }
 
-        @media(max-width:600px) {
-            h2 {
-                font-size: 17px;
-            }
-
-            p {
-                font-size: 11px;
-            }
+        img {
+            height: 400px;
         }
 
-        @media(max-width:480px) {
-            h2 {
-                font-size: 15px;
-            }
+        .divisor {
+            height: 3px !important;
+            width: 140px !important;
 
-            p {
-                font-size: 10px;
+            &:hover {
+                width: 380px !important;
             }
         }
+    }
 
-        @media(max-width:320px) {
+    @media(max-width: 375px) {
+        height: 1250px;
+
+        img {height: 350px;}
+
+        .divisor {
+            height: 2px !important;
+            width: 120px !important;
+
+            &:hover {
+                width: 330px !important;
+            }
+        }
+    }
+}
+
+.section-bodegas {
+    @extend %flex-2;
+    margin: 5px;
+    padding: 10px;
+    height: 800px;
+    background-color: nth($colors, 1);
+
+    .detalle-bodegas {
+        width: 50%;
+        text-align: justify;
+        padding-left: 10px;
+
+        h2 {
+            color: map-get($h2w, color);
+            font-size: map-get($h2w, font-size);
+            font-weight: map-get($h2w, font-weight);
+        }
+
+        .divisor {
+            @extend %divisor;
+        }
+
+        p {
+            color: map-get($parraf2-w, color);
+            font-size: map-get($parraf2-w, font-size);
+            font-weight: map-get($parraf2-w, font-weight);
+            word-spacing: map-get($parraf-w, word-spacing);
+        }
+    }
+
+    @media (max-width:1200px) {
+        .detalle-bodegas {
             h2 {
-                font-size: 12px;
+                font-size: 22px;
             }
 
             p {
-                font-size: 8px;
+                font-size: 14px;
             }
         }
     }
 
     @media (max-width:1024px) {
-        flex-direction: column !important;
-        align-items: center;
-    }
-}
+        .carrusel-mio {
+            width: 50%;
+        }
 
-.iframe-mendoza {
-    background-color: $color-ppl;
-    margin: 5px;
-    padding: 10px;
-    border-radius: 10px;
-    @extend %flex-3;
-
-    h2 {
-        color: map-get($h2, color);
-        font-size: map-get($h2, font-size);
-        font-weight: map-get($h2, font-weight);
-        padding-bottom: 15px;
-    }
-
-    .video-mendoza {
-        justify-content: center;
-
-        iframe {
-            border-radius: 10px;
-            width: 700px;
-            height: 380px;
-            @extend %sombras;
-
-            @media (max-width:768px) {
-                width: 550px;
-            }
-
-            @media (max-width:600px) {
-                width: 400px;
-            }
-
-            @media (max-width:480px) {
-                width: 280px;
-                height: 300px;
+        .detalle-bodegas {
+            .divisor {
+                &:hover {
+                    width: 400px !important;
+                }
             }
         }
     }
 
-    @media(max-width:1200px) {
+    @media (max-width:768px) {
+        height: 600px;
+
+        .detalle-bodegas {
+            h2 {
+                font-size: 18px
+            }
+
+            p {
+                font-size: 12px
+            }
+
+            .divisor {
+                height: 4px !important;
+            
+                &:hover {
+                    width: 300px !important;
+                }
+            }
+        }
+    }
+
+    @media (max-width:425px) {
+        flex-direction: column-reverse !important;
+        height: 800px;
+
+        .detalle-bodegas {
+            width: auto;
+            padding: 0;
+
+            h2 {
+                font-size: 16px
+            }
+
+            p {
+                font-size: 10px
+            }
+
+            .divisor {
+                height: 3px !important;
+                width: 140px !important;
+
+                &:hover {
+                    width: 380px !important;
+                }
+            }
+        }
+
+        .carrusel-mio {
+            width: auto;
+            padding: 0;
+        }
+    }
+
+    @media(max-width: 375px) {
+        .detalle-bodegas {
+            .divisor {
+                height: 2px !important;
+                width: 120px !important;
+
+                &:hover {
+                    width: 330px !important;
+                }
+            }
+        }
+    }
+}
+
+.iframe-mendoza {
+    @extend %flex-3;
+    height: 800px;
+    align-items: center;
+
+    h2 {
+        text-align: center;
+        color: map-get($h2, color);
+        font-size: map-get($h2, font-size);
+        font-weight: map-get($h2, font-weight);
+    }
+
+    .divisor {
+        @extend %divisor;
+    }
+
+    .video-mendoza {
+        iframe {
+            border-radius: 10px;
+            @extend %sombras;
+            width: 900px;
+            height: 600px;
+        }
+    }
+
+    @media (max-width:1200px) {
         h2 {
             font-size: 22px;
         }
     }
 
-    @media(max-width:1024px) {
-        h2 {
-            font-size: 21px;
+    @media (max-width:1024px) {
+        .video-mendoza iframe {
+            width: 800px;
         }
     }
 
-    @media(max-width:768px) {
+    @media (max-width:768px) {
+        height: 700px;
+
         h2 {
-            font-size: 20px;
+            font-size: 18px;
+        }
+
+        .divisor {
+            height: 4px !important;
+        }
+
+        .video-mendoza iframe {
+            width: 700px;
+            height: 500px;
         }
     }
 
-    @media(max-width:600px) {
+    @media (max-width:425px) {
+        height: 350px;
+
         h2 {
-            font-size: 17px;
+            font-size: 16px;
+        }
+
+        .divisor {
+            margin-top: 5px !important;
+            margin-bottom: 1em !important;
+            height: 3px !important;
+            width: 140px !important;
+
+            &:hover {
+                width: 380px !important;
+            }
+        }
+
+        .video-mendoza iframe {
+            width: 380px;
+            height: 200px;
         }
     }
 
-    @media(max-width:425px) {
-        h2 {
-            font-size: 15px;
-        }
-    }
+    @media(max-width:375px) {
+        .divisor {
+            height: 2px !important;
+            width: 120px !important;
 
-    @media(max-width:320px) {
-        h2 {
-            font-size: 12px;
+            &:hover {
+                width: 330px !important;
+            }
+        }
+        
+        .video-mendoza iframe {
+            width: 330px;
+            height: 180px;
         }
     }
 }

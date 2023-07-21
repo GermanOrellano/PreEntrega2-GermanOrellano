@@ -1,46 +1,39 @@
 @import '../utilities/list';
-@import '../utilities/variables';
-@import '../utilities/extends';
 
 .footer {
-    height: 40px;
-    color: nth($colors, 2);
-    @extend %flex-1;
-    background-image: linear-gradient(to right, $color-ppl, $color-sd);
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: nth($colors, 3);
+    height: 150px;
+    color: #ffff;
 
     address {
-        margin: 2px;
-        color: $color-h;
+        display: inline-flex;
+        align-content: center;
+        flex-wrap: wrap;
     }
 
-    .iconos-footer {
-        display: flex;
-        margin: 0;
-    
-        li{
-            display: inline-flex;
-        }
+    .iconos-footer{
+        list-style: none;
+        display: inline-flex;
+        align-content: center;
+        flex-wrap: wrap;
     }
 
-    @media (max-width:768px){
+    @media(max-width: 768px) {
         font-size: smaller;
     }
 
-    @media (max-width:480px){
+    @media(max-width: 425px) {
+        height: 110px;
         font-size: x-small;
 
-        .iconos-footer { 
+        .iconos-footer{
             img {
-                height: 20px;
+                width: 15px;
+                height: 15px;
             }
         }
     }
-
-    @media (max-width:320px){
-        font-size: xx-small;
-        text-align: center;
-    }
 }
-

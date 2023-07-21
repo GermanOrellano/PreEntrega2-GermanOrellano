@@ -1,31 +1,39 @@
-@import '../utilities/variables';
-@import '../utilities/list';
 @import '../utilities/mixins';
+@import '../base/typo';
 
 .main-ruta-vino {
-    background-color: $color-ppl;
+    margin: 20px 5px;
+    padding: 10px;
+    height: 900px;
     align-items: center;
-    border-radius: 10px;
-    @include nueva-grilla(1.2fr 1.5fr 0.75fr 0.75 fr, 0.5fr 1fr 1fr, "titulo-grid titulo-grid titulo-grid titulo-grid"
-        "foto-main parraf-main ruta1 ruta2"
-        "foto-main parraf-main ruta3 ruta4");
-    font-size: nth($font-sizes, 4);
-    column-gap: 5px;
 
+    @include nueva-grilla (1fr 1fr 0.5fr 0.5fr, 0.1fr 0.1fr 0.7fr 0.3fr 0.3fr,
+        "titulo-grid titulo-grid titulo-grid titulo-grid"
+        "divisor divisor divisor divisor"
+        "parraf-main parraf-main foto-main foto-main"
+        "parraf-main parraf-main ruta1 ruta2"
+        "parraf-main parraf-main ruta3 ruta4");
+    gap: 5px;
 
     h1 {
-        @include grillas-text (titulo-grid, center);
+        @include grillas-text (titulo-grid, left);
         color: map-get($h1, color);
         font-size: map-get($h1, font-size);
         font-weight: map-get($h1, font-weight);
     }
 
+    .divisor {
+        @extend %divisor;
+    }
+
     p {
         @include grillas-text (parraf-main, justify);
-        color: map-get($parraf3, color);
-        font-size: map-get($parraf3, font-size);
-        font-weight: map-get($parraf3, font-weight);
-
+        text-align: justify;
+        color: map-get($parraf, color);
+        font-size: map-get($parraf, font-size);
+        font-weight: map-get($parraf, font-weight);
+        word-spacing: map-get($parraf, word-spacing);
+        padding: 10px;
     }
 
     img {
@@ -35,30 +43,28 @@
     }
 
     .img-main-ruta {
-        @include grillas-img (foto-main, center, center);
+        @include grillas-img(foto-main, center, center);
     }
 
     .img-ruta1 {
-        @include grillas-img (ruta1, center, center);
+        @include grillas-img(ruta1, center, center);
     }
 
     .img-ruta2 {
-        @include grillas-img (ruta2, center, center);
+        @include grillas-img(ruta2, center, center);
     }
 
     .img-ruta3 {
-        @include grillas-img (ruta3, center, center);
+        @include grillas-img(ruta3, center, center);
     }
 
     .img-ruta4 {
-        @include grillas-img (ruta4, center, center);
+        @include grillas-img(ruta4, center, center);
     }
 
     @media(max-width:1200px) {
-        @include nueva-grilla(1.5fr 1fr 1fr, 0.3fr 1fr 1fr 1fr, "titulo-grid titulo-grid titulo-grid"
-            "parraf-main parraf-main parraf-main"
-            "foto-main ruta1 ruta2"
-            "foto-main ruta3 ruta4");
+        padding: 5px;
+        height: 800px;
 
         h1 {
             font-size: 28px;
@@ -66,79 +72,109 @@
 
         p {
             font-size: 16px;
-            padding: 0 10px 0 10px;
-        }
-
-        .img-main-ruta {
-            width: 500px;
-        }
-
-        .img-ruta1,
-        .img-ruta2,
-        .img-ruta3,
-        .img-ruta4 {
-            width: 300px;
-            height: 200px;
         }
     }
 
     @media(max-width:1024px) {
+        padding: 5px;
+        height: 1000px;
 
-        h1 {
-            font-size: 27px;
+        .divisor {
+            &:hover {
+                width: 400px !important;
+            }
         }
 
-        p {
-            font-size: 15px;
-            padding: 0 10px 0 10px;
+        .img-ruta1 {
+            width: 220px
+        }
+    
+        .img-ruta2 {
+            width: 220px
         }
 
-        .img-main-ruta {
-            width: 400px;
+        .img-ruta3 {
+            width: 220px
         }
 
-        .img-ruta1,
-        .img-ruta2,
-        .img-ruta3,
         .img-ruta4 {
-            width: 250px;
-            height: auto;
+            width: 220px
         }
     }
 
     @media(max-width:768px) {
-        @include nueva-grilla(1fr 1fr, 0.1fr 0.3fr 1fr 0.4fr 0.4fr, "titulo-grid titulo-grid"
-            "parraf-main parraf-main"
-            "foto-main foto-main"
-            "ruta1 ruta2"
-            "ruta3 ruta4");
+        
+        @include nueva-grilla (repeat(2, 1fr), 0.1fr 0.1fr 0.7fr 0.3fr 0.3fr,
+        "titulo-grid titulo-grid"
+        "divisor divisor"
+        "parraf-main parraf-main"
+        "foto-main foto-main" 
+        "ruta1 ruta2"
+        "ruta3 ruta4");
+
+        padding: 5px;
+        height: 1500px;
 
         h1 {
-            font-size: 22px;
+            font-size: 24px;
+        }
+
+        .divisor {
+            height: 4px !important;
+            &:hover {
+                width: 300px !important;
+            }
+        }
+
+        p {
+            font-size: 14px;
         }
 
         .img-main-ruta {
-            width: 700px;
+            width: 80%;
         }
 
-        .img-ruta1,
-        .img-ruta2,
-        .img-ruta3,
+        .img-ruta1 {
+            width: 350px
+        }
+    
+        .img-ruta2 {
+            width: 350px
+        }
+
+        .img-ruta3 {
+            width: 350px
+        }
+
         .img-ruta4 {
-            width: 350px;
-            height: auto;
+            width: 350px
         }
     }
 
-    @media(max-width:600px) {
-        @include nueva-grilla(1fr 1fr, 0.1fr 0.3fr 1fr 0.4fr 0.4fr, "titulo-grid titulo-grid"
-            "parraf-main parraf-main"
-            "foto-main foto-main"
-            "ruta1 ruta2"
-            "ruta3 ruta4");
+    @media(max-width:425px) {
+        
+        @include nueva-grilla (1fr, 0.1fr 0.1fr 1fr 1fr 1fr 1fr 1fr 1fr,
+        "titulo-grid"
+        "divisor"
+        "parraf-main"
+        "foto-main" 
+        "ruta1" 
+        "ruta2"
+        "ruta3" 
+        "ruta4");
+
+        padding: 5px;
+        height: 2000px;
 
         h1 {
-            font-size: 21px;
+            font-size: 20px;
+        }
+
+        .divisor {
+            height: 3px !important;
+            &:hover {
+                width: 300px !important;
+            }
         }
 
         p {
@@ -146,127 +182,100 @@
         }
 
         .img-main-ruta {
-            width: 580px;
+            width: 350px;
         }
 
-        .img-ruta1,
-        .img-ruta2,
-        .img-ruta3,
+        .img-ruta1 {
+            width: 350px
+        }
+    
+        .img-ruta2 {
+            width: 350px
+        }
+
+        .img-ruta3 {
+            width: 350px
+        }
+
         .img-ruta4 {
-            width: 280px;
-            height: auto;
+            width: 350px
         }
     }
 
-    @media(max-width:480px) {
-        h1 {
-            font-size: 20px;
-        }
-
-        p {
-            font-size: 10px;
-        }
-
-        .img-main-ruta {
-            width: 450px;
-        }
-
-        .img-ruta1,
-        .img-ruta2,
-        .img-ruta3,
-        .img-ruta4 {
-            width: 210px;
-            height: auto;
-        }
-    }
-
-    @media(max-width:320px) {
-        @include nueva-grilla(1fr, 0.1fr 0.3fr 1fr 0.4fr 0.4fr, "titulo-grid"
-            "parraf-main"
-            "foto-main"
-            "ruta1"
-            "ruta2"
-            "ruta3"
-            "ruta4");
-
-        h1 {
-            font-size: 18px;
-        }
-
-        p {
-            font-size: 8px;
-        }
-
-        .img-main-ruta {
-            width: 310px;
-        }
-
-        .img-ruta1,
-        .img-ruta2,
-        .img-ruta3,
-        .img-ruta4 {
-            width: 280px;
-            height: auto;
+    @media(max-width:375px) {
+        margin: 10px 0;
+        padding: 0;
+        .divisor {
+            height: 2px !important;
         }
     }
 }
 
 .contrataciones {
-    margin: 5px 10px;
+    @extend %flex-3;
+    height: 1100px;
+    margin: 0 5px;
+    padding: 10px;
     background-color: nth($colors, 1);
 
     h2 {
-        padding-top: 5px;
-        text-align: center;
-        color: map-get($h2, color);
-        font-size: map-get($h2, font-size);
-        font-weight: map-get($h2, font-weight);
+        text-align: left;
+        color: map-get($h2w, color);
+        font-size: map-get($h2w, font-size);
+        font-weight: map-get($h2w, font-weight);
     }
 
-    .flex-contrataciones {
+    .divisor {
+        @extend %divisor;
+    }
+
+    .img-contrataciones {
         @extend %flex-2;
 
         img {
+            width: 45%;
             border-radius: 15px;
-            padding: 5px;
+            margin: 5px;
+            @extend %sombras;
         }
     }
 
-    .grid-contrataciones {
-        @include nueva-grilla(repeat(2, 1fr), 0.3fr 1.5fr, "tour alojamiento" "p-tour-bici p-alojamiento");
+    .descripcion-contrataciones {
+        @include nueva-grilla (repeat(2, 1fr), 0.3fr 1.5fr,
+            "tour alojamiento"
+            "p-tour-bici p-alojamiento");
         gap: 20px;
         margin: 5px;
+    }
 
+    .tour {
+        @include grillas-text (tour, center);
+        color: map-get($h3w, color);
+        font-size: map-get($h3w, font-size);
+        font-weight: map-get($h3w, font-weight);
+    }
 
-        .tour {
-            @include grillas-text (tour, center);
-            color: map-get($h3, color);
-            font-size: map-get($h3, font-size);
-            font-weight: map-get($h3, font-weight);
-            align-self: center;
-        }
+    .p-tour-bici {
+        @include grillas-text (p-tour-bici, justify);
+        color: map-get($parraf2-w, color);
+        font-size: map-get($parraf2-w, font-size);
+        font-weight: map-get($parraf2-w, font-weight);
+        word-spacing: map-get($parraf2-w, word-spacing);
+    }
 
-        .p-tour-bici {
-            @include grillas-text (p-tour-bici, justify);
-            color: map-get($parraf3, color);
-            font-size: map-get($parraf3, font-size);
-            font-weight: map-get($parraf3, font-weight);
-        }
+    .alojamiento {
+        @include grillas-text (alojamiento, center);
+        color: map-get($h3w, color);
+        font-size: map-get($h3w, font-size);
+        font-weight: map-get($h3w, font-weight);
+    }
 
-        .alojamiento {
-            @include grillas-text (alojamiento, center);
-            color: map-get($h3, color);
-            font-size: map-get($h3, font-size);
-            font-weight: map-get($h3, font-weight);
-            align-self: center;
-        }
-
-        .p-alojamiento {
-            @include grillas-text (p-alojamiento, justify);
-            color: map-get($parraf3, color);
-            font-size: map-get($parraf3, font-size);
-            font-weight: map-get($parraf3, font-weight);
-        }
+    .p-alojamiento {
+        @include grillas-text (p-alojamiento, justify);
+        color: map-get($parraf2-w, color);
+        font-size: map-get($parraf2-w, font-size);
+        font-weight: map-get($parraf2-w, font-weight);
+        word-spacing: map-get($parraf2-w, word-spacing);
     }
 
     @media(max-width:1200px) {
@@ -274,199 +283,103 @@
             font-size: 22px;
         }
 
-        .flex-contrataciones {
-            img {
-                width: 580px;
+        .descripcion-contrataciones {
+            h3 {
+                font-size: 18px;
+            }
+    
+            p {
+                font-size: 14px;
             }
         }
-
-        .grid-contrataciones {
-            .tour, .alojamiento {
-                font-size: 19px;
-            }
-
-            .p-tour-bici, .p-alojamiento {
-                font-size: 16px;
-            }
-        }
+        
     }
 
     @media(max-width:1024px) {
-        h2 {
-            font-size: 21px;
-        }
-
-        .flex-contrataciones {
-            img {
-                width: 500px;
-            }
-        }
-
-        .grid-contrataciones {
-            .tour, .alojamiento {
-                font-size: 18px;
-            }
-
-            .p-tour-bici, .p-alojamiento {
-                font-size: 14px;
-            }
-        }
+        height: 900px;
     }
 
     @media(max-width:768px) {
+        height: 700px;
+
         h2 {
-            font-size: 20px;
+            font-size: 18px;
         }
 
-        .flex-contrataciones {
-            img {
-                width: 375px;
+        .divisor {
+            height: 4px !important;
+            &:hover {
+                width: 500px !important;
             }
         }
 
-        .grid-contrataciones {
-            .tour, .alojamiento {
-                font-size: 17px;
+        .descripcion-contrataciones {
+            h3 {
+                font-size: 16px;
             }
-
-            .p-tour-bici, .p-alojamiento {
-                font-size: 13px;
+    
+            p {
+                font-size: 12px;
             }
         }
+        
     }
 
-    @media(max-width:600px) {
+    @media(max-width:425px) {
+        height: 700px;
+
         h2 {
-            font-size: 17px;
+            font-size: 16px;
         }
 
-        .flex-contrataciones {
-            img {
-                width: 290px;
+        .divisor {
+            height: 3px !important;
+            &:hover {
+                width: 350px !important;
             }
         }
 
-        .grid-contrataciones {
-            .tour, .alojamiento {
+        .descripcion-contrataciones {
+            h3 {
                 font-size: 14px;
             }
-
-            .p-tour-bici, .p-alojamiento {
+    
+            p {
                 font-size: 10px;
             }
         }
     }
 
-    @media(max-width:480px) {
-        h2 {
-            font-size: 15px;
-        }
+    @media(max-width:375px) {
+        .divisor {
+            height: 2px !important;
 
-        .flex-contrataciones {
-            img {
-                width: 220px;
+            &:hover {
+                width: 330px;
             }
-        }
-
-        .grid-contrataciones {
-
-            .tour, .alojamiento {
-                font-size: 12px;
-            }
-
-            .p-tour-bici, .p-alojamiento {
-                font-size: 9px;
-            }
-        }
-    }
-
-    @media(max-width:320px) {
-        h2 {
-            font-size: 12px;
-        }
-
-        .flex-contrataciones {
-            img {
-                width: 150px;
-            }
-        }
-
-        .grid-contrataciones {
-
-            .tour, .alojamiento {
-                font-size: 9px;
-            }
-
-            .p-tour-bici, .p-alojamiento {
-                font-size: 7px;
-            }
-
-            gap: 7px;
-        }
-    }
-
-    @media(max-width:1024px) {
-        h2 {
-            font-size: 21px;
-        }
-    }
-
-    @media(max-width:768px) {
-        h2 {
-            font-size: 20px;
-        }
-    }
-
-    @media(max-width:600px) {
-        h2 {
-            font-size: 17px;
-        }
-    }
-
-    @media(max-width:480px) {
-        h2 {
-            font-size: 15px;
-        }
-
-    }
-
-    @media(max-width:320px) {
-        h2 {
-            font-size: 12px;
         }
     }
 }
 
 .map {
-    background-color: $color-ppl;
-    margin: 5px;
-    padding: 10px;
-    border-radius: 10px;
+    height: 700px;
     @extend %flex-3;
 
     iframe {
-        border-radius: 10px;
-        width: 700px;
-        align-self: center;
-        @extend %sombras;
+        width: 100%;
+        height: 80%;
     }
 
-    @media(max-width:600px) {
-        iframe {
-            width: 550px;
-        }
+    
+    @media(max-width:768px) {
+        height: 500px;
     }
 
-    @media(max-width:480px) {
-        iframe {
-            width: 430px;
-        }
+    @media(max-width:425px) {
+        height: 400px;
     }
 
-    @media(max-width:320px) {
-        iframe {
-            width: 270px;
-            height: auto;
-        }
+    @media(max-width:375px) {
+        height: 300px;
     }
 }
