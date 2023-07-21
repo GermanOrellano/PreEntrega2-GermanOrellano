@@ -950,7 +950,7 @@
   margin: 5px;
   padding: 10px;
 }
-.sobre-nosotros .titulo {
+.sobre-nosotros .titulo h1 {
   color: #000000;
   font-size: 30px;
   font-weight: bolder;
@@ -971,7 +971,7 @@
   border-radius: 15px;
 }
 @media (max-width: 1200px) {
-  .sobre-nosotros h1 {
+  .sobre-nosotros .titulo h1 {
     font-size: 28px;
   }
   .sobre-nosotros .yo p {
@@ -995,7 +995,7 @@
   }
 }
 @media (max-width: 768px) {
-  .sobre-nosotros h1 {
+  .sobre-nosotros .titulo h1 {
     font-size: 24px;
   }
   .sobre-nosotros .divisor {
@@ -1006,7 +1006,7 @@
   }
 }
 @media (max-width: 425px) {
-  .sobre-nosotros h1 {
+  .sobre-nosotros .titulo h1 {
     font-size: 20px;
   }
   .sobre-nosotros .divisor {
