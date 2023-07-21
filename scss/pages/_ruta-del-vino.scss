@@ -61,6 +61,154 @@
     .img-ruta4 {
         @include grillas-img(ruta4, center, center);
     }
+
+    @media(max-width:1200px) {
+        padding: 5px;
+        height: 800px;
+
+        h1 {
+            font-size: 28px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    @media(max-width:1024px) {
+        padding: 5px;
+        height: 1000px;
+
+        .divisor {
+            &:hover {
+                width: 400px !important;
+            }
+        }
+
+        .img-ruta1 {
+            width: 220px
+        }
+    
+        .img-ruta2 {
+            width: 220px
+        }
+
+        .img-ruta3 {
+            width: 220px
+        }
+
+        .img-ruta4 {
+            width: 220px
+        }
+    }
+
+    @media(max-width:768px) {
+        
+        @include nueva-grilla (repeat(2, 1fr), 0.1fr 0.1fr 0.7fr 0.3fr 0.3fr,
+        "titulo-grid titulo-grid"
+        "divisor divisor"
+        "parraf-main parraf-main"
+        "foto-main foto-main" 
+        "ruta1 ruta2"
+        "ruta3 ruta4");
+
+        padding: 5px;
+        height: 1500px;
+
+        h1 {
+            font-size: 24px;
+        }
+
+        .divisor {
+            height: 4px !important;
+            &:hover {
+                width: 300px !important;
+            }
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .img-main-ruta {
+            width: 80%;
+        }
+
+        .img-ruta1 {
+            width: 350px
+        }
+    
+        .img-ruta2 {
+            width: 350px
+        }
+
+        .img-ruta3 {
+            width: 350px
+        }
+
+        .img-ruta4 {
+            width: 350px
+        }
+    }
+
+    @media(max-width:425px) {
+        
+        @include nueva-grilla (1fr, 0.1fr 0.1fr 1fr 1fr 1fr 1fr 1fr 1fr,
+        "titulo-grid"
+        "divisor"
+        "parraf-main"
+        "foto-main" 
+        "ruta1" 
+        "ruta2"
+        "ruta3" 
+        "ruta4");
+
+        padding: 5px;
+        height: 2000px;
+
+        h1 {
+            font-size: 20px;
+        }
+
+        .divisor {
+            height: 3px !important;
+            &:hover {
+                width: 300px !important;
+            }
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        .img-main-ruta {
+            width: 350px;
+        }
+
+        .img-ruta1 {
+            width: 350px
+        }
+    
+        .img-ruta2 {
+            width: 350px
+        }
+
+        .img-ruta3 {
+            width: 350px
+        }
+
+        .img-ruta4 {
+            width: 350px
+        }
+    }
+
+    @media(max-width:375px) {
+        margin: 10px 0;
+        padding: 0;
+        .divisor {
+            height: 2px !important;
+        }
+    }
 }
 
 .contrataciones {
@@ -129,6 +277,88 @@
         font-weight: map-get($parraf2-w, font-weight);
         word-spacing: map-get($parraf2-w, word-spacing);
     }
+
+    @media(max-width:1200px) {
+        h2 {
+            font-size: 22px;
+        }
+
+        .descripcion-contrataciones {
+            h3 {
+                font-size: 18px;
+            }
+    
+            p {
+                font-size: 14px;
+            }
+        }
+        
+    }
+
+    @media(max-width:1024px) {
+        height: 900px;
+    }
+
+    @media(max-width:768px) {
+        height: 700px;
+
+        h2 {
+            font-size: 18px;
+        }
+
+        .divisor {
+            height: 4px !important;
+            &:hover {
+                width: 500px !important;
+            }
+        }
+
+        .descripcion-contrataciones {
+            h3 {
+                font-size: 16px;
+            }
+    
+            p {
+                font-size: 12px;
+            }
+        }
+        
+    }
+
+    @media(max-width:425px) {
+        height: 700px;
+
+        h2 {
+            font-size: 16px;
+        }
+
+        .divisor {
+            height: 3px !important;
+            &:hover {
+                width: 350px !important;
+            }
+        }
+
+        .descripcion-contrataciones {
+            h3 {
+                font-size: 14px;
+            }
+    
+            p {
+                font-size: 10px;
+            }
+        }
+    }
+
+    @media(max-width:375px) {
+        .divisor {
+            height: 2px !important;
+
+            &:hover {
+                width: 330px;
+            }
+        }
+    }
 }
 
 .map {
@@ -138,5 +368,18 @@
     iframe {
         width: 100%;
         height: 80%;
+    }
+
+    
+    @media(max-width:768px) {
+        height: 500px;
+    }
+
+    @media(max-width:425px) {
+        height: 400px;
+    }
+
+    @media(max-width:375px) {
+        height: 300px;
     }
 }

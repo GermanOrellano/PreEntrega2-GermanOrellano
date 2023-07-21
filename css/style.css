@@ -284,6 +284,9 @@
   .main-index .divisor {
     height: 4px !important;
   }
+  .main-index .divisor:hover {
+    width: 500px !important;
+  }
 }
 @media (max-width: 425px) {
   .main-index {
@@ -356,6 +359,9 @@
   .section-bodegas .carrusel-mio {
     width: 50%;
   }
+  .section-bodegas .detalle-bodegas .divisor:hover {
+    width: 400px !important;
+  }
 }
 @media (max-width: 768px) {
   .section-bodegas {
@@ -369,6 +375,9 @@
   }
   .section-bodegas .detalle-bodegas .divisor {
     height: 4px !important;
+  }
+  .section-bodegas .detalle-bodegas .divisor:hover {
+    width: 300px !important;
   }
 }
 @media (max-width: 425px) {
@@ -500,6 +509,57 @@
   font-weight: normal;
   word-spacing: 4px;
 }
+@media (max-width: 1200px) {
+  .main-mendoza h1 {
+    font-size: 28px;
+  }
+  .main-mendoza p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1024px) {
+  .main-mendoza {
+    height: 500px;
+  }
+}
+@media (max-width: 768px) {
+  .main-mendoza h1 {
+    font-size: 24px;
+  }
+  .main-mendoza .divisor {
+    height: 4px !important;
+  }
+  .main-mendoza p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 425px) {
+  .main-mendoza h1 {
+    font-size: 20px;
+  }
+  .main-mendoza .divisor {
+    height: 3px !important;
+    width: 140px !important;
+  }
+  .main-mendoza .divisor:hover {
+    width: 380px !important;
+  }
+  .main-mendoza p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 375px) {
+  .main-mendoza .divisor {
+    height: 2px !important;
+    width: 150px !important;
+  }
+  .main-mendoza .divisor:hover {
+    width: 330px !important;
+  }
+  .main-mendoza p {
+    font-size: 12px;
+  }
+}
 
 .zonas-mendoza {
   display: grid;
@@ -536,6 +596,37 @@
   color: #000000;
   font-size: 24px;
   font-weight: normal;
+}
+@media (max-width: 1200px) {
+  .zonas-mendoza .card-body h2 {
+    font-size: 22px;
+  }
+  .zonas-mendoza .card-body p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .zonas-mendoza .card-body h2 {
+    font-size: 18px;
+  }
+  .zonas-mendoza .card-body p {
+    font-size: 10px;
+  }
+}
+@media (max-width: 425px) {
+  .zonas-mendoza {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr) !important;
+    gap: 15px;
+    padding: 40px;
+    text-align: justify;
+  }
+  .zonas-mendoza .card-body h2 {
+    font-size: 16px;
+  }
+  .zonas-mendoza .card-body p {
+    font-size: 8px;
+  }
 }
 
 .main-ruta-vino {
@@ -595,6 +686,122 @@
   align-self: center;
   justify-self: center;
 }
+@media (max-width: 1200px) {
+  .main-ruta-vino {
+    padding: 5px;
+    height: 800px;
+  }
+  .main-ruta-vino h1 {
+    font-size: 28px;
+  }
+  .main-ruta-vino p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1024px) {
+  .main-ruta-vino {
+    padding: 5px;
+    height: 1000px;
+  }
+  .main-ruta-vino .divisor:hover {
+    width: 400px !important;
+  }
+  .main-ruta-vino .img-ruta1 {
+    width: 220px;
+  }
+  .main-ruta-vino .img-ruta2 {
+    width: 220px;
+  }
+  .main-ruta-vino .img-ruta3 {
+    width: 220px;
+  }
+  .main-ruta-vino .img-ruta4 {
+    width: 220px;
+  }
+}
+@media (max-width: 768px) {
+  .main-ruta-vino {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.1fr 0.1fr 0.7fr 0.3fr 0.3fr;
+    grid-template-areas: "titulo-grid titulo-grid" "divisor divisor" "parraf-main parraf-main" "foto-main foto-main" "ruta1 ruta2" "ruta3 ruta4";
+    padding: 5px;
+    height: 1500px;
+  }
+  .main-ruta-vino h1 {
+    font-size: 24px;
+  }
+  .main-ruta-vino .divisor {
+    height: 4px !important;
+  }
+  .main-ruta-vino .divisor:hover {
+    width: 300px !important;
+  }
+  .main-ruta-vino p {
+    font-size: 14px;
+  }
+  .main-ruta-vino .img-main-ruta {
+    width: 80%;
+  }
+  .main-ruta-vino .img-ruta1 {
+    width: 350px;
+  }
+  .main-ruta-vino .img-ruta2 {
+    width: 350px;
+  }
+  .main-ruta-vino .img-ruta3 {
+    width: 350px;
+  }
+  .main-ruta-vino .img-ruta4 {
+    width: 350px;
+  }
+}
+@media (max-width: 425px) {
+  .main-ruta-vino {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "titulo-grid" "divisor" "parraf-main" "foto-main" "ruta1" "ruta2" "ruta3" "ruta4";
+    padding: 5px;
+    height: 2000px;
+  }
+  .main-ruta-vino h1 {
+    font-size: 20px;
+  }
+  .main-ruta-vino .divisor {
+    height: 3px !important;
+  }
+  .main-ruta-vino .divisor:hover {
+    width: 300px !important;
+  }
+  .main-ruta-vino p {
+    font-size: 12px;
+  }
+  .main-ruta-vino .img-main-ruta {
+    width: 350px;
+  }
+  .main-ruta-vino .img-ruta1 {
+    width: 350px;
+  }
+  .main-ruta-vino .img-ruta2 {
+    width: 350px;
+  }
+  .main-ruta-vino .img-ruta3 {
+    width: 350px;
+  }
+  .main-ruta-vino .img-ruta4 {
+    width: 350px;
+  }
+}
+@media (max-width: 375px) {
+  .main-ruta-vino {
+    margin: 10px 0;
+    padding: 0;
+  }
+  .main-ruta-vino .divisor {
+    height: 2px !important;
+  }
+}
 
 .contrataciones {
   height: 1100px;
@@ -651,6 +858,70 @@
   font-weight: normal;
   word-spacing: 4px;
 }
+@media (max-width: 1200px) {
+  .contrataciones h2 {
+    font-size: 22px;
+  }
+  .contrataciones .descripcion-contrataciones h3 {
+    font-size: 18px;
+  }
+  .contrataciones .descripcion-contrataciones p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1024px) {
+  .contrataciones {
+    height: 900px;
+  }
+}
+@media (max-width: 768px) {
+  .contrataciones {
+    height: 700px;
+  }
+  .contrataciones h2 {
+    font-size: 18px;
+  }
+  .contrataciones .divisor {
+    height: 4px !important;
+  }
+  .contrataciones .divisor:hover {
+    width: 500px !important;
+  }
+  .contrataciones .descripcion-contrataciones h3 {
+    font-size: 16px;
+  }
+  .contrataciones .descripcion-contrataciones p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 425px) {
+  .contrataciones {
+    height: 700px;
+  }
+  .contrataciones h2 {
+    font-size: 16px;
+  }
+  .contrataciones .divisor {
+    height: 3px !important;
+  }
+  .contrataciones .divisor:hover {
+    width: 350px !important;
+  }
+  .contrataciones .descripcion-contrataciones h3 {
+    font-size: 14px;
+  }
+  .contrataciones .descripcion-contrataciones p {
+    font-size: 10px;
+  }
+}
+@media (max-width: 375px) {
+  .contrataciones .divisor {
+    height: 2px !important;
+  }
+  .contrataciones .divisor:hover {
+    width: 330px;
+  }
+}
 
 .map {
   height: 700px;
@@ -658,6 +929,21 @@
 .map iframe {
   width: 100%;
   height: 80%;
+}
+@media (max-width: 768px) {
+  .map {
+    height: 500px;
+  }
+}
+@media (max-width: 425px) {
+  .map {
+    height: 400px;
+  }
+}
+@media (max-width: 375px) {
+  .map {
+    height: 300px;
+  }
 }
 
 .sobre-nosotros {
@@ -683,6 +969,66 @@
 .sobre-nosotros .yo img {
   margin-left: 10px;
   border-radius: 15px;
+}
+@media (max-width: 1200px) {
+  .sobre-nosotros h1 {
+    font-size: 28px;
+  }
+  .sobre-nosotros .yo p {
+    font-size: 16px;
+  }
+  .sobre-nosotros img {
+    margin: 0;
+    width: 50%;
+  }
+}
+@media (max-width: 1024px) {
+  .sobre-nosotros .yo {
+    flex-direction: column !important;
+  }
+  .sobre-nosotros p {
+    margin-bottom: 20px;
+  }
+  .sobre-nosotros img {
+    margin-top: 20px;
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .sobre-nosotros h1 {
+    font-size: 24px;
+  }
+  .sobre-nosotros .divisor {
+    height: 4px !important;
+  }
+  .sobre-nosotros .yo p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 425px) {
+  .sobre-nosotros h1 {
+    font-size: 20px;
+  }
+  .sobre-nosotros .divisor {
+    height: 3px !important;
+  }
+  .sobre-nosotros .divisor:hover {
+    width: 350px !important;
+  }
+  .sobre-nosotros .yo p {
+    font-size: 12px;
+  }
+  .sobre-nosotros .yo img {
+    margin: 0;
+  }
+}
+@media (max-width: 375px) {
+  .sobre-nosotros .divisor {
+    height: 2px !important;
+  }
+  .sobre-nosotros .divisor:hover {
+    width: 330px !important;
+  }
 }
 
 .main-mendoza {
@@ -760,6 +1106,64 @@
 }
 .main-contacto .mapa-ubicacion iframe {
   border-radius: 10px;
+}
+@media (max-width: 1200px) {
+  .main-contacto {
+    gap: 10px;
+  }
+  .main-contacto .titulo-contacto {
+    font-size: 28px;
+  }
+  .main-contacto .formulario label {
+    font-size: 16px;
+  }
+  .main-contacto .titulo-ubicacion {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1024px) {
+  .main-contacto {
+    gap: 10px;
+  }
+  .main-contacto .mapa-ubicacion iframe {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .main-contacto {
+    gap: 10px;
+  }
+  .main-contacto .titulo-contacto {
+    font-size: 24px;
+  }
+  .main-contacto .formulario label {
+    font-size: 14px;
+  }
+  .main-contacto .titulo-ubicacion {
+    font-size: 18px;
+  }
+}
+@media (max-width: 425px) {
+  .main-contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr 1fr;
+    grid-template-areas: "titulo-contacto" "formulario" "titulo-ubicacion" "mapa";
+  }
+  .main-contacto .titulo-contacto {
+    font-size: 20px;
+  }
+  .main-contacto .formulario label {
+    font-size: 12px;
+  }
+  .main-contacto .titulo-ubicacion {
+    font-size: 16px;
+  }
+}
+@media (max-width: 375px) {
+  .main-contacto .mapa-ubicacion iframe {
+    height: 400px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

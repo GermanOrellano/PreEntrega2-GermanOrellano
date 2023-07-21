@@ -4,7 +4,7 @@
     margin: 5px;
     padding: 10px;
     @include nueva-grilla (repeat(2, 1fr), 50px 500px, "titulo-contacto titulo-ubicacion"
-                                                       "formulario mapa");
+        "formulario mapa");
     align-items: center;
 
     .titulo-contacto {
@@ -31,6 +31,86 @@
         iframe {
             border-radius: 10px;
             @extend %sombras;
+        }
+    }
+
+    @media(max-width:1200px) {
+        gap: 10px;
+
+        .titulo-contacto {
+            font-size: 28px;
+        }
+
+        .formulario {
+
+            label {
+                font-size: 16px;
+            }
+        }
+
+        .titulo-ubicacion {
+            font-size: 22px;
+        }
+
+    }
+
+    @media(max-width:1024px) {
+        gap: 10px;
+
+        .mapa-ubicacion {
+            iframe {
+                width: 100%;
+            }
+        }
+
+    }
+
+    @media(max-width:768px) {
+        gap: 10px;
+
+        .titulo-contacto {
+            font-size: 24px;
+        }
+
+        .formulario {
+
+            label {
+                font-size: 14px;
+            }
+        }
+
+        .titulo-ubicacion {
+            font-size: 18px;
+        }
+    }
+
+    @media(max-width:425px) {
+        @include nueva-grilla (1fr, 0.1fr 1fr 0.1fr 1fr, "titulo-contacto"
+            "formulario"
+            "titulo-ubicacion"
+            "mapa");
+
+        .titulo-contacto {
+            font-size: 20px;
+        }
+
+        .formulario {
+
+            label {
+                font-size: 12px;
+            }
+        }
+
+        .titulo-ubicacion {
+            font-size: 16px;
+        }
+    }
+
+    @media(max-width:375px) {
+        .mapa-ubicacion {
+            iframe {
+                height: 400px;
+            }
         }
     }
 }

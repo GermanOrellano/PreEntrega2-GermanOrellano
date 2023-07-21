@@ -80,6 +80,10 @@
 
         .divisor {
             height: 4px !important;
+
+            &:hover {
+                width: 500px !important;
+            }
         }
     }
 
@@ -172,6 +176,14 @@
         .carrusel-mio {
             width: 50%;
         }
+
+        .detalle-bodegas {
+            .divisor {
+                &:hover {
+                    width: 400px !important;
+                }
+            }
+        }
     }
 
     @media (max-width:768px) {
@@ -188,6 +200,10 @@
 
             .divisor {
                 height: 4px !important;
+            
+                &:hover {
+                    width: 300px !important;
+                }
             }
         }
     }
